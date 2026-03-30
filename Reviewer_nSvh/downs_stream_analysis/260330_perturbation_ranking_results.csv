@@ -1,0 +1,133 @@
+pathway,method,spearman_rho,p_value,n_perts,pathway_clean
+adipogenesis,AdaPert,0.35821981361377925,1.1737387173785728e-09,272,Adipogenesis
+adipogenesis,TxPert,0.2958756025827872,6.732336344883859e-07,272,Adipogenesis
+adipogenesis,Linear,-0.01000686962267166,0.8695094802280233,272,Adipogenesis
+allograft rejection,AdaPert,0.46395714118744286,6.338734458512394e-16,272,Allograft Rejection
+allograft rejection,TxPert,0.43957713655998865,2.8037997159806733e-14,272,Allograft Rejection
+allograft rejection,Linear,0.18212431154692926,0.002568993251410648,272,Allograft Rejection
+androgen response,AdaPert,0.3174439517504418,8.779323729104707e-08,272,Androgen Response
+androgen response,TxPert,0.2538546216102109,2.265182638944701e-05,272,Androgen Response
+androgen response,Linear,0.2934175657205828,8.404811551487124e-07,272,Androgen Response
+apical junction,AdaPert,0.19543122386621403,0.001197038596507734,272,Apical Junction
+apical junction,TxPert,0.22500995856758824,0.00018258593142617358,272,Apical Junction
+apical junction,Linear,0.15964537958243188,0.008345753302547254,272,Apical Junction
+apoptosis,AdaPert,0.13274949491576363,0.028598671285600848,272,Apoptosis
+apoptosis,TxPert,0.2623743047450375,1.1635329356740302e-05,272,Apoptosis
+apoptosis,Linear,0.2431733124700348,5.055397010002443e-05,272,Apoptosis
+bile acid metabolism,AdaPert,0.39280585921567035,1.810411517486968e-11,272,Bile Acid Metabolism
+bile acid metabolism,TxPert,0.28069683734975676,2.564406667192684e-06,272,Bile Acid Metabolism
+bile acid metabolism,Linear,0.28488122470106403,1.7874794949049977e-06,272,Bile Acid Metabolism
+cholesterol homeostasis,AdaPert,0.5080932742100529,2.9337217576019234e-19,272,Cholesterol Homeostasis
+cholesterol homeostasis,TxPert,0.4600858225776827,1.1808128778426293e-15,272,Cholesterol Homeostasis
+cholesterol homeostasis,Linear,0.26150065476091083,1.2471286451138554e-05,272,Cholesterol Homeostasis
+coagulation,AdaPert,0.3242563275665077,4.457544614111855e-08,272,Coagulation
+coagulation,TxPert,0.24531470266221728,4.3161832723932956e-05,272,Coagulation
+coagulation,Linear,-0.009271008999682756,0.8790287948389461,272,Coagulation
+complement,AdaPert,0.3952913268628484,1.3158387019778943e-11,272,Complement
+complement,TxPert,0.47081960800215616,2.063432135480748e-16,272,Complement
+complement,Linear,0.19701207193067402,0.0010895756804147306,272,Complement
+dna repair,AdaPert,-0.16271703117806868,0.007162684003421419,272,Dna Repair
+dna repair,TxPert,0.041865937405333974,0.49170948385937496,272,Dna Repair
+dna repair,Linear,-0.1961217640618552,0.0011489524837020623,272,Dna Repair
+e2f targets,AdaPert,0.18385478280001097,0.0023327010744579515,272,E2F Targets
+e2f targets,TxPert,0.2073949127660045,0.0005770170743026806,272,E2F Targets
+e2f targets,Linear,0.030801875042377837,0.6130124546380524,272,E2F Targets
+epithelial mesenchymal transition,AdaPert,0.33083136746041014,2.280425086258591e-08,272,Epithelial Mesenchymal Transition
+epithelial mesenchymal transition,TxPert,0.28278515493622935,2.1432714203830194e-06,272,Epithelial Mesenchymal Transition
+epithelial mesenchymal transition,Linear,0.0697552935451785,0.25157478418274476,272,Epithelial Mesenchymal Transition
+estrogen response early,AdaPert,0.23005424139567832,0.0001291099222552816,272,Estrogen Response Early
+estrogen response early,TxPert,0.14151184175060885,0.019549333419903295,272,Estrogen Response Early
+estrogen response early,Linear,0.13149066041403784,0.03015608338726471,272,Estrogen Response Early
+estrogen response late,AdaPert,0.0761585928722894,0.2105427575543396,272,Estrogen Response Late
+estrogen response late,TxPert,0.046300183428466465,0.4469596595828651,272,Estrogen Response Late
+estrogen response late,Linear,0.04549605078631749,0.45489965221473105,272,Estrogen Response Late
+fatty acid metabolism,AdaPert,0.32946221349737737,2.625416636280765e-08,272,Fatty Acid Metabolism
+fatty acid metabolism,TxPert,0.3062808149089894,2.5716659942498366e-07,272,Fatty Acid Metabolism
+fatty acid metabolism,Linear,0.1315425403769228,0.030090494837852744,272,Fatty Acid Metabolism
+g2-m checkpoint,AdaPert,0.03153771906586772,0.604551176113049,272,G2-M Checkpoint
+g2-m checkpoint,TxPert,0.14396735967612118,0.017509740257529438,272,G2-M Checkpoint
+g2-m checkpoint,Linear,0.11918002925161136,0.049585903946079486,272,G2-M Checkpoint
+glycolysis,AdaPert,0.4230545151397904,3.094008972880878e-13,272,Glycolysis
+glycolysis,TxPert,0.3148281327818498,1.1338649997732012e-07,272,Glycolysis
+glycolysis,Linear,0.2453675136866993,4.2993110217343756e-05,272,Glycolysis
+heme metabolism,AdaPert,0.47720919193678035,7.093051182584848e-17,272,Heme Metabolism
+heme metabolism,TxPert,0.4406767532445847,2.3785691324468545e-14,272,Heme Metabolism
+heme metabolism,Linear,0.1165867993521564,0.05479505318613081,272,Heme Metabolism
+hypoxia,AdaPert,0.25139121785529417,2.7345913200859776e-05,272,Hypoxia
+hypoxia,TxPert,0.21177043056791262,0.00043729425932659705,272,Hypoxia
+hypoxia,Linear,0.027196430658553514,0.6551985705345773,272,Hypoxia
+il-2/stat5 signaling,AdaPert,0.01706492986067546,0.7793499189481149,272,Il-2/Stat5 Signaling
+il-2/stat5 signaling,TxPert,-0.11076701704033537,0.06814903359260219,272,Il-2/Stat5 Signaling
+il-2/stat5 signaling,Linear,-0.09937636706683807,0.10195268812930076,272,Il-2/Stat5 Signaling
+il-6/jak/stat3 signaling,AdaPert,0.10946075847313093,0.07148584178780847,272,Il-6/Jak/Stat3 Signaling
+il-6/jak/stat3 signaling,TxPert,0.15316634743593716,0.011426003965455327,272,Il-6/Jak/Stat3 Signaling
+il-6/jak/stat3 signaling,Linear,0.005433680710433477,0.9289209697461205,272,Il-6/Jak/Stat3 Signaling
+inflammatory response,AdaPert,0.2251536720279937,0.00018081122958837662,272,Inflammatory Response
+inflammatory response,TxPert,0.2695891583996641,6.498947242403802e-06,272,Inflammatory Response
+inflammatory response,Linear,-0.009612104847616024,0.874614028191083,272,Inflammatory Response
+interferon alpha response,AdaPert,-0.037255180244110134,0.5406628345925317,272,Interferon Alpha Response
+interferon alpha response,TxPert,0.18731707840672457,0.0019183317111959744,272,Interferon Alpha Response
+interferon alpha response,Linear,0.09687897299141057,0.11089960907311745,272,Interferon Alpha Response
+interferon gamma response,AdaPert,-0.008412306165724876,0.8901591650972019,272,Interferon Gamma Response
+interferon gamma response,TxPert,0.11418243141707433,0.06002261041639614,272,Interferon Gamma Response
+interferon gamma response,Linear,-0.0817592435782147,0.17880292365047376,272,Interferon Gamma Response
+kras signaling dn,AdaPert,-0.2281507834470717,0.00014728065698047568,272,Kras Signaling Dn
+kras signaling dn,TxPert,-0.0633615353606671,0.2977737847021108,272,Kras Signaling Dn
+kras signaling dn,Linear,0.11522241596042332,0.057713089993964906,272,Kras Signaling Dn
+kras signaling up,AdaPert,0.10254044848140785,0.09144889727169658,272,Kras Signaling Up
+kras signaling up,TxPert,0.031158986444421645,0.6088996223297674,272,Kras Signaling Up
+kras signaling up,Linear,0.0647742207868103,0.2871102761321988,272,Kras Signaling Up
+mitotic spindle,AdaPert,0.23401474494360625,9.782322351900429e-05,272,Mitotic Spindle
+mitotic spindle,TxPert,0.19249283891477614,0.001423035999509153,272,Mitotic Spindle
+mitotic spindle,Linear,0.06696924267974391,0.27105573388384774,272,Mitotic Spindle
+mtorc1 signaling,AdaPert,0.36299304558667866,6.793746426986169e-10,272,Mtorc1 Signaling
+mtorc1 signaling,TxPert,0.27064911956457494,5.957508454773998e-06,272,Mtorc1 Signaling
+mtorc1 signaling,Linear,0.19477287723444972,0.001244597751976146,272,Mtorc1 Signaling
+myc targets v1,AdaPert,0.20942428602897997,0.000507741379992951,272,Myc Targets V1
+myc targets v1,TxPert,0.2492208860739974,3.2230188122843395e-05,272,Myc Targets V1
+myc targets v1,Linear,-0.1307892338083558,0.03105491382475659,272,Myc Targets V1
+myc targets v2,AdaPert,0.3247995763732685,4.2199440835984965e-08,272,Myc Targets V2
+myc targets v2,TxPert,0.3459946283367164,4.571636063963195e-09,272,Myc Targets V2
+myc targets v2,Linear,0.20137297246712862,0.0008374384507839353,272,Myc Targets V2
+myogenesis,AdaPert,0.27941474631294466,2.8609192705395628e-06,272,Myogenesis
+myogenesis,TxPert,0.26869407995954553,6.992312204116261e-06,272,Myogenesis
+myogenesis,Linear,-0.016670165085619824,0.7843272637411669,272,Myogenesis
+oxidative phosphorylation,AdaPert,-0.004842144306655678,0.9366417881731133,272,Oxidative Phosphorylation
+oxidative phosphorylation,TxPert,-0.0034392888737328725,0.9549744461860721,272,Oxidative Phosphorylation
+oxidative phosphorylation,Linear,-0.22465699587342575,0.0001870139820385199,272,Oxidative Phosphorylation
+p53 pathway,AdaPert,0.19385991694435364,0.001313424401431324,272,P53 Pathway
+p53 pathway,TxPert,0.1154573665969368,0.05720163166911956,272,P53 Pathway
+p53 pathway,Linear,-0.014969456417253245,0.8058684917243539,272,P53 Pathway
+pi3k/akt/mtor  signaling,AdaPert,0.1830492060576714,0.002440122521984843,272,Pi3K/Akt/Mtor  Signaling
+pi3k/akt/mtor  signaling,TxPert,0.0285482913006247,0.6392428317408363,272,Pi3K/Akt/Mtor  Signaling
+pi3k/akt/mtor  signaling,Linear,0.19864778156508128,0.0009877833100933263,272,Pi3K/Akt/Mtor  Signaling
+pperoxisome,AdaPert,0.31307410843985617,1.3442003190691618e-07,272,Pperoxisome
+pperoxisome,TxPert,0.390293557104931,2.492731676100397e-11,272,Pperoxisome
+pperoxisome,Linear,0.25080324494259804,2.8595073763952554e-05,272,Pperoxisome
+protein secretion,AdaPert,0.19740325877725484,0.0010643899710024956,272,Protein Secretion
+protein secretion,TxPert,0.20539038777588806,0.0006539472201254649,272,Protein Secretion
+protein secretion,Linear,-0.08423874801126807,0.16594046433333928,272,Protein Secretion
+reactive oxygen species pathway,AdaPert,0.21393567361659394,0.0003804378532325896,272,Reactive Oxygen Species Pathway
+reactive oxygen species pathway,TxPert,0.20085595975546047,0.0008642285773688553,272,Reactive Oxygen Species Pathway
+reactive oxygen species pathway,Linear,0.19629887152135903,0.001136908938830265,272,Reactive Oxygen Species Pathway
+spermatogenesis,AdaPert,0.10453633624894748,0.08528070769824846,272,Spermatogenesis
+spermatogenesis,TxPert,0.1694626189959378,0.005074376649695093,272,Spermatogenesis
+spermatogenesis,Linear,-0.07482164026553,0.21868511188180878,272,Spermatogenesis
+tgf-beta signaling,AdaPert,0.19684689089941962,0.0011003741556200473,272,Tgf-Beta Signaling
+tgf-beta signaling,TxPert,0.1469657973890663,0.015272750067239431,272,Tgf-Beta Signaling
+tgf-beta signaling,Linear,0.12137645293712147,0.045503176957077555,272,Tgf-Beta Signaling
+tnf-alpha signaling via nf-kb,AdaPert,0.2582012083857102,1.6171562768090993e-05,272,Tnf-Alpha Signaling Via Nf-Kb
+tnf-alpha signaling via nf-kb,TxPert,0.270528960945718,6.016657323410408e-06,272,Tnf-Alpha Signaling Via Nf-Kb
+tnf-alpha signaling via nf-kb,Linear,0.046551234743116655,0.4444969372949724,272,Tnf-Alpha Signaling Via Nf-Kb
+unfolded protein response,AdaPert,0.28418710657694807,1.8985352924573006e-06,272,Unfolded Protein Response
+unfolded protein response,TxPert,0.22545842588119056,0.0001771010854262159,272,Unfolded Protein Response
+unfolded protein response,Linear,0.19157663081631707,0.0015011245436147157,272,Unfolded Protein Response
+uv response dn,AdaPert,0.051294375257909,0.3994368645851446,272,Uv Response Dn
+uv response dn,TxPert,0.003961959464455666,0.9481408455580448,272,Uv Response Dn
+uv response dn,Linear,-0.07792549321744024,0.2001197304343529,272,Uv Response Dn
+uv response up,AdaPert,0.21771336976459613,0.0002973774668194688,272,Uv Response Up
+uv response up,TxPert,0.21778313936985522,0.0002960159281650234,272,Uv Response Up
+uv response up,Linear,0.07041303606313373,0.24712100997220687,272,Uv Response Up
+xenobiotic metabolism,AdaPert,0.05819202503595817,0.33901258562123604,272,Xenobiotic Metabolism
+xenobiotic metabolism,TxPert,0.08944821187061254,0.1411897999007666,272,Xenobiotic Metabolism
+xenobiotic metabolism,Linear,0.2660297158886262,8.680477671629571e-06,272,Xenobiotic Metabolism

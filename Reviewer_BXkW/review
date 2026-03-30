@@ -1,0 +1,22 @@
+Summary:
+This study proposes a computational framework ADAPERT, for predicting transcriptional responses to genetic perturbations that addresses the mean-collapse problem. The work may have been a laborious one that I should appreciate the authors' time and patience to come up with some results.
+
+Strengths And Weaknesses:
+The identification of mean-collapse as a key failure mode is convincing. Combining structural graph information with semantic information (language model embeddings from NCBI descriptions) is effective and biologically meaningful. While the paper compares with several graph-based and VAE-based methods, it lacks comparison with recent single-cell foundation models like scGPT, scBERT, or Geneformer that might capture perturbation responses through different mechanisms. The method relies exclusively on the STRING PPI network. It's unclear how sensitive performance is to this choice or whether integrating multiple knowledge sources (e.g., pathway databases, co-expression networks) could further improve results.
+
+Soundness: 2: fair
+Presentation: 2: fair
+Significance: 2: fair
+Originality: 2: fair
+Key Questions For Authors:
+You should add comparison with recent single-cell foundation models like scGPT, scBERT, or Geneformer that might capture perturbation responses through different mechanisms.
+The method relies exclusively on the STRING PPI network. It's unclear how sensitive performance is to this choice or whether integrating multiple knowledge sources (e.g., pathway databases, co-expression networks) could further improve results.
+The knowledge graph inevitably misses some edges and may include false positives. How robust is ADAPERT to incomplete or noisy graph structure? Have the authors experimented with graph perturbation or edge dropout during training?
+The method uses GPT-4o embeddings of NCBI descriptions. How sensitive are results to the choice of language model? Would fine-tuning these embeddings on perturbation data improve performance, or is a frozen embedding sufficient?
+Limitations:
+No.
+
+Overall Recommendation: 3: Weak reject: A paper with clear merits, but also some weaknesses, which overall outweigh the merits. Papers in this category require revisions before they can be meaningfully built upon by others. Please use sparingly.
+Confidence: 5: You are absolutely certain about your assessment. You are very familiar with the related work and checked the math/other details carefully.
+Compliance With LLM Reviewing Policy: Affirmed.
+Code Of Conduct Acknowledgement: Affirmed.
