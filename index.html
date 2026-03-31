@@ -347,19 +347,19 @@
     <!-- === All Figures === -->
     <div class="figure-block">
       <img src="Reviewer_BXkW/comprehensive_results/k562_comparison.png" alt="K562 Comparison">
-      <div class="caption">Figure 1: Comprehensive Comparison — K562</div>
+      <div class="caption">Figure 1: Method comparison on K562 unseen perturbation setting (n=272 test perturbations). 11 methods compared: Context Mean, Linear (GenePT), Linear (One-hot), scVI, CPA, STATE, scGPT, GEARS, MORPH, TxPert, and AdaPert. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +13.8% improvement over the second-best method (TxPert) and ranks first across all evaluated metrics. Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_BXkW/comprehensive_results/jurkat_comparison.png" alt="JURKAT Comparison">
-      <div class="caption">Figure 2: Comprehensive Comparison — JURKAT</div>
+      <div class="caption">Figure 2: Method comparison on JURKAT unseen perturbation setting (n=446 test perturbations). AdaPert achieves the highest Pearson Delta (+1.8% over TxPert), best Overlap@50 (+12.1%), DE Direction Match (+6.8%), and DE Spearman LFC. JURKAT is a T-cell leukemia line with distinct biology from the other cell lines, demonstrating AdaPert's generalization to diverse cellular contexts.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_BXkW/comprehensive_results/hepg2_comparison.png" alt="HEPG2 Comparison">
-      <div class="caption">Figure 3: Comprehensive Comparison — HEPG2</div>
+      <div class="caption">Figure 3: Method comparison on HEPG2 unseen perturbation setting (n=496 test perturbations). AdaPert achieves the highest Pearson Delta (+5.5% over TxPert) and competitive performance across all metrics. HepG2 presents a challenging setting with sparse DEG distributions (median 32 DEGs per perturbation), yet AdaPert consistently outperforms baselines on both global and DEG-level metrics including DE Direction Match (+3.5%) and DE Spearman LFC (+9.8%).</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_BXkW/comprehensive_results/rpe1_comparison.png" alt="RPE1 Comparison">
-      <div class="caption">Figure 4: Comprehensive Comparison — RPE1</div>
+      <div class="caption">Figure 4: Method comparison on RPE1 unseen perturbation setting (n=461 test perturbations). Same 11 methods as K562. AdaPert achieves the highest Pearson Delta (+8.2% over TxPert), lowest MAE Delta, and best DEG-level metrics including Overlap@50 (+9.8%) and DE Spearman LFC (+1.1%). MORPH performs competitively on Discrimination L1 but falls behind on perturbation-specific metrics. Radar chart confirms AdaPert's overall dominance across the metric suite.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_BXkW/comprehensive_results/k562_cross_comparison.png" alt="K562 Cross Cell-Line">
@@ -637,49 +637,6 @@
     </div>
   </div>
 
-  <!-- Empty sub-panels -->
-  <div id="nSvh_ablation" class="sub-panel">
-    <div class="figure-block">
-      <img src="Reviewer_nSvh/ablation_median/ablation_barplot_nature.png" alt="Ablation Barplot">
-      <div class="caption">Figure 1: Ablation study stratified by perturbation size (% DEGs). Mean and median reported across three discrimination metrics (L1, L2, Cosine) and Pearson &Delta;. Non-DEG loss improves directional accuracy for small perturbations; context module improves magnitude fidelity for large perturbations.</div>
-    </div>
-
-    <div class="table-block">
-      <div class="caption">Table 1: Small perturbations (&lt;5% DEGs, n=92) — Non-DEG loss provides the largest improvement: Pearson &Delta; +6.7%, Cosine +6.7% (median). Suppresses false positives in non-DEG genes, improving signal-to-noise ratio for subtle perturbations.</div>
-      <table>
-        <thead><tr><th>Model</th><th>Pearson &Delta;</th><th>Discrim. L1</th><th>Discrim. L2</th><th>Discrim. Cosine</th></tr></thead>
-        <tbody>
-          <tr><td>w/o non-DEG loss</td><td>0.4699</td><td>0.7941</td><td>0.8713</td><td>0.7978</td></tr>
-          <tr><td>w/o context</td><td>0.4937</td><td>0.7978</td><td>0.8842</td><td>0.8272</td></tr>
-          <tr><td>AdaPert</td><td>0.5014</td><td>0.7978</td><td>0.8971</td><td>0.8511</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="table-block">
-      <div class="caption">Table 2: Medium perturbations (5–10% DEGs, n=80) — Both components contribute minimally (&lt;1.5% across all metrics). Base GNN architecture is sufficient at this scale via message passing on PPI network.</div>
-      <table>
-        <thead><tr><th>Model</th><th>Pearson &Delta;</th><th>Discrim. L1</th><th>Discrim. L2</th><th>Discrim. Cosine</th></tr></thead>
-        <tbody>
-          <tr><td>w/o non-DEG loss</td><td>0.6803</td><td>0.7923</td><td>0.8897</td><td>0.9449</td></tr>
-          <tr><td>w/o context</td><td>0.6917</td><td>0.7813</td><td>0.8934</td><td>0.9467</td></tr>
-          <tr><td>AdaPert</td><td>0.6916</td><td>0.7555</td><td>0.8915</td><td>0.9540</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="table-block">
-      <div class="caption">Table 3: Large perturbations (&gt;10% DEGs, n=100) — Context module provides the largest improvement: Discrim. L2 +13.3%, L1 +12.3% (median). Aggregates cross-perturbation information to improve magnitude accuracy for complex cascading effects.</div>
-      <table>
-        <thead><tr><th>Model</th><th>Pearson &Delta;</th><th>Discrim. L1</th><th>Discrim. L2</th><th>Discrim. Cosine</th></tr></thead>
-        <tbody>
-          <tr><td>w/o non-DEG loss</td><td>0.8476</td><td>0.6857</td><td>0.8364</td><td>0.9890</td></tr>
-          <tr><td>w/o context</td><td>0.8100</td><td>0.6710</td><td>0.8162</td><td>0.9871</td></tr>
-          <tr><td>AdaPert</td><td>0.8468</td><td>0.7537</td><td>0.9246</td><td>0.9890</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
   <div id="nSvh_downstream" class="sub-panel">
     <div class="figure-block">
       <img src="Reviewer_nSvh/downs_stream_analysis/260330_deg_recovery_table.png" alt="DEG Recovery" style="max-width:700px;">
