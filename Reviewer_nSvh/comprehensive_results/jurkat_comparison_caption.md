@@ -1,1 +1,0 @@
-Method comparison on JURKAT unseen perturbation setting (n=446 test perturbations). AdaPert achieves the highest Pearson Delta (+1.8% over TxPert), best Overlap@50 (+12.1%), DE Direction Match (+6.8%), and DE Spearman LFC. JURKAT is a T-cell leukemia line with distinct biology from the other cell lines, demonstrating AdaPert's generalization to diverse cellular contexts.

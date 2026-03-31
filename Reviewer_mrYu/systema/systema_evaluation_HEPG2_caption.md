@@ -1,1 +1,0 @@
-Systema evaluation on HEPG2 unseen perturbation setting (n=496 perturbations). AdaPert leads with PΔ_pert=0.394, PΔ20_pert=0.384, and centroid accuracy=0.685. TxPert follows at 0.359. MORPH shows strong centroid accuracy (0.681) but lower PΔ_pert (0.284). CPA and matching-mean produce negative PΔ_pert, failing to capture perturbation-specific effects in this sparse-DEG dataset.
