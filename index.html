@@ -340,6 +340,7 @@
   <div class="sub-tabs">
     <button class="active" onclick="showSub('BXkW', 'BXkW_comprehensive', this)">comprehensive_results</button>
     <button onclick="showSub('BXkW', 'BXkW_kg', this)">KG_variations</button>
+    <button onclick="showSub('BXkW', 'BXkW_lm', this)">LM_variations</button>
   </div>
 
   <div id="BXkW_comprehensive" class="sub-panel active">
@@ -490,6 +491,14 @@
           <tr><td>AdaPert (Adaptive)</td><td>0.6200</td><td>0.0220</td><td>0.7014</td><td>0.7557</td><td>0.8185</td><td>0.2607</td><td>0.8663</td><td>0.6745</td></tr>
         </tbody>
       </table>
+    </div>
+  </div>
+
+  <!-- LM_variations -->
+  <div id="BXkW_lm" class="sub-panel">
+    <div class="figure-block">
+      <img src="Reviewer_BXkW/LM_variations/260331_llm_embedding_comparison.png" alt="LLM Embedding Comparison">
+      <div class="caption">Figure 1: Sensitivity of perturbation prediction to the choice of language model for gene summary generation. (a) Test Pearson delta comparison between GPT-4o and Claude (Haiku 4.5) for generating gene functional summaries, which are subsequently embedded using the same text-embedding-3-large model (3,072 dimensions). Two reference source conditions are tested: NCBI + UniProt (combining gene descriptions with protein functional summaries) and NCBI only (gene descriptions alone). Delta values indicate the performance difference (Claude − GPT). (b) Composition of gene summaries by source. When NCBI + UniProt references are available, 99.4% of the 18,166 genes in the STRING PPI network have existing database descriptions, leaving only 117 genes (0.6%) requiring AI generation. With NCBI descriptions alone, 1,364 genes (7.5%) lack substantive descriptions and require AI-generated summaries. The performance difference between LLMs scales with the proportion of AI-generated content: negligible when most summaries come from curated databases, but measurable (+0.0050 Pearson delta) when a larger fraction relies on AI generation.</div>
     </div>
   </div>
 </div>
@@ -733,6 +742,7 @@
   <div class="sub-tabs">
     <button class="active" onclick="showSub('t8Qj', 't8Qj_downstream', this)">downstream_analysis</button>
     <button onclick="showSub('t8Qj', 't8Qj_adaptive', this)">adaptive learning</button>
+    <button onclick="showSub('t8Qj', 't8Qj_lm_init', this)">LM_init</button>
   </div>
 
   <div id="t8Qj_downstream" class="sub-panel active">
@@ -754,6 +764,14 @@
     <div class="figure-block">
       <img src="Reviewer_t8Qj/adaptive learning/inference_detail.png" alt="Adaptive Learning Inference">
       <div class="caption">Figure 1: Adaptive Learning — Inference Detail</div>
+    </div>
+  </div>
+
+  <!-- LM_init -->
+  <div id="t8Qj_lm_init" class="sub-panel">
+    <div class="figure-block">
+      <img src="Reviewer_t8Qj/LM_init/k562_llm_init_vs_adapert.png" alt="LLM-Init Node vs AdaPert">
+      <div class="caption">Figure 1: Comparison of node embedding strategies on K562 single-cell perturbation prediction. AdaPert uses a dual-channel node embedding where learned embeddings (nn.Embedding) are additively combined with a linear projection of GenePertESM LLM embeddings (Linear(3072→128)) at every forward pass. LLM-Init Node instead initializes nn.Embedding weights from projected LLM embeddings and discards the LLM projection afterward, training the embeddings freely. AdaPert outperforms LLM-Init Node across all six metrics: Pearson Delta (+4.6%), MAE Delta (-2.5%), Discrimination L1 (+5.2%), Overlap@50 (+5.7%), DE Direction Match (+1.2%), and DE Spearman LFC (+2.3%). Potential reasons: (1) only 54% of genes (9854/18216) have LLM embeddings, leaving the rest with random initialization; (2) the linear projection used for initialization is itself randomly initialized; (3) AdaPert's additive fusion preserves continuous access to LLM semantic information throughout training, while LLM-Init loses this signal after initialization.</div>
     </div>
   </div>
 </div>
