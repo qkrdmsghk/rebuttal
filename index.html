@@ -93,10 +93,30 @@
   .sub-panel { display: none; }
   .sub-panel.active { display: block; }
 
+  /* Two-column layout */
+  .two-col {
+    display: flex;
+    gap: 32px;
+    margin: 32px 0;
+    align-items: flex-start;
+  }
+  .two-col .col-left {
+    flex: 1;
+    min-width: 0;
+  }
+  .two-col .col-right {
+    flex: 1;
+    min-width: 0;
+  }
+  .two-col .figure-block {
+    margin: 0 0 28px 0;
+    max-width: 100%;
+  }
+
   /* Figure block */
   .figure-block {
     margin: 32px auto;
-    max-width: 80%;
+    max-width: 95%;
     text-align: center;
   }
   .figure-block img {
@@ -249,7 +269,7 @@
           <tr><td>GEARS</td><td>0.0364</td><td>0.3375</td><td>0.2396</td><td>0.5449</td><td>272</td><td>0.5551</td></tr>
           <tr><td>MORPH</td><td>0.3624</td><td>0.4419</td><td>0.4408</td><td>0.6269</td><td>262</td><td>0.7292</td></tr>
           <tr><td>TxPert</td><td>0.4825</td><td>0.5496</td><td>0.5865</td><td>0.7046</td><td>272</td><td>0.7793</td></tr>
-          <tr><td>AdaPert</td><td>0.5338</td><td>0.5987</td><td>0.6184</td><td>0.7375</td><td>272</td><td>0.8105</td></tr>
+          <tr><td>AdaPert</td><td><b>0.5338</b></td><td><b>0.5987</b></td><td><b>0.6184</b></td><td><b>0.7375</b></td><td>272</td><td><b>0.8105</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -269,7 +289,7 @@
           <tr><td>GEARS</td><td>0.0448</td><td>0.1872</td><td>0.2993</td><td>0.4853</td><td>446</td><td>0.5681</td></tr>
           <tr><td>MORPH</td><td>0.2662</td><td>0.2886</td><td>0.3091</td><td>0.4980</td><td>398</td><td>0.6763</td></tr>
           <tr><td>TxPert</td><td>0.3129</td><td>0.3286</td><td>0.4861</td><td>0.6373</td><td>446</td><td>0.6748</td></tr>
-          <tr><td>AdaPert</td><td>0.3450</td><td>0.3796</td><td>0.5003</td><td>0.6527</td><td>446</td><td>0.6867</td></tr>
+          <tr><td>AdaPert</td><td><b>0.3450</b></td><td><b>0.3796</b></td><td><b>0.5003</b></td><td><b>0.6527</b></td><td>446</td><td><b>0.6867</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -289,7 +309,7 @@
           <tr><td>GEARS</td><td>0.1488</td><td>0.2432</td><td>0.2346</td><td>0.4400</td><td>496</td><td>0.5965</td></tr>
           <tr><td>MORPH</td><td>0.2836</td><td>0.3341</td><td>0.3464</td><td>0.5139</td><td>384</td><td>0.6805</td></tr>
           <tr><td>TxPert</td><td>0.3591</td><td>0.3422</td><td>0.4502</td><td>0.5805</td><td>496</td><td>0.6698</td></tr>
-          <tr><td>AdaPert</td><td>0.3943</td><td>0.3835</td><td>0.4694</td><td>0.6072</td><td>496</td><td>0.6849</td></tr>
+          <tr><td>AdaPert</td><td><b>0.3943</b></td><td><b>0.3835</b></td><td><b>0.4694</b></td><td><b>0.6072</b></td><td>496</td><td><b>0.6849</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -307,9 +327,9 @@
           <tr><td>scGPT</td><td>0.0701</td><td>-0.1091</td><td>0.5077</td><td>0.5656</td><td>464</td><td>0.5043</td></tr>
           <tr><td>STATE</td><td>-0.0438</td><td>0.0954</td><td>0.5834</td><td>0.6927</td><td>461</td><td>0.4989</td></tr>
           <tr><td>GEARS</td><td>0.1210</td><td>0.1613</td><td>0.3635</td><td>0.5894</td><td>461</td><td>0.5508</td></tr>
-          <tr><td>MORPH</td><td>0.3277</td><td>0.3647</td><td>0.5409</td><td>0.6784</td><td>405</td><td>0.6977</td></tr>
+          <tr><td>MORPH</td><td>0.3277</td><td><b>0.3647</b></td><td>0.5409</td><td>0.6784</td><td>405</td><td><b>0.6977</b></td></tr>
           <tr><td>TxPert</td><td>0.3571</td><td>0.2709</td><td>0.6545</td><td>0.7297</td><td>461</td><td>0.6539</td></tr>
-          <tr><td>AdaPert</td><td>0.3786</td><td>0.3396</td><td>0.6665</td><td>0.7434</td><td>461</td><td>0.6911</td></tr>
+          <tr><td>AdaPert</td><td><b>0.3786</b></td><td>0.3396</td><td><b>0.6665</b></td><td><b>0.7434</b></td><td>461</td><td>0.6911</td></tr>
         </tbody>
       </table>
     </div>
@@ -328,7 +348,7 @@
           <tr><td>STATE</td><td>0.7184</td><td>0.6579</td><td>0.3766</td><td>0.5953</td><td>1092</td><td>0.6217</td></tr>
           <tr><td>GEARS</td><td>0.6548</td><td>0.5304</td><td>0.2540</td><td>0.4340</td><td>1087</td><td>0.4994</td></tr>
           <tr><td>MORPH</td><td>0.3631</td><td>0.0179</td><td>-0.0983</td><td>-0.3553</td><td>1052</td><td>0.5007</td></tr>
-          <tr><td>AdaPert</td><td>0.7826</td><td>0.7330</td><td>0.5091</td><td>0.6844</td><td>1087</td><td>0.6885</td></tr>
+          <tr><td>AdaPert</td><td><b>0.7826</b></td><td><b>0.7330</b></td><td><b>0.5091</b></td><td><b>0.6844</b></td><td>1087</td><td><b>0.6885</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -347,23 +367,23 @@
     <!-- === All Figures === -->
     <div class="figure-block">
       <img src="Reviewer_BXkW/comprehensive_results/k562_comparison.png" alt="K562 Comparison">
-      <div class="caption">Figure 1: Method comparison on K562 unseen perturbation setting (n=272 test perturbations). 11 methods compared: Context Mean, Linear (GenePT), Linear (One-hot), scVI, CPA, STATE, scGPT, GEARS, MORPH, TxPert, and AdaPert. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +13.8% improvement over the second-best method (TxPert) and ranks first across all evaluated metrics. Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
+      <div class="caption"><b>Figure 1: Method comparison on K562 unseen perturbation setting (n=272 test perturbations)</b>. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +5.5% improvement over the second-best method (TxPert), along with the best Overlap@50 (+7.5%), MAE Delta (-3.8%), DE Spearman LFC (+3.0%), and DE Direction Match (+1.9%), ranking first across all evaluated metrics. Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_BXkW/comprehensive_results/jurkat_comparison.png" alt="JURKAT Comparison">
-      <div class="caption">Figure 2: Method comparison on JURKAT unseen perturbation setting (n=446 test perturbations). AdaPert achieves the highest Pearson Delta (+1.8% over TxPert), best Overlap@50 (+12.1%), DE Direction Match (+6.8%), and DE Spearman LFC. JURKAT is a T-cell leukemia line with distinct biology from the other cell lines, demonstrating AdaPert's generalization to diverse cellular contexts.</div>
+      <div class="caption"><b>Figure 2: Method comparison on JURKAT unseen perturbation setting (n=446 test perturbations)</b>. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +2.9% improvement over the second-best method (TxPert), along with the best MAE Delta (-1.6%), Overlap@50 (+12.1%), and DE Direction Match (+0.8%). Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_BXkW/comprehensive_results/hepg2_comparison.png" alt="HEPG2 Comparison">
-      <div class="caption">Figure 3: Method comparison on HEPG2 unseen perturbation setting (n=496 test perturbations). AdaPert achieves the highest Pearson Delta (+5.5% over TxPert) and competitive performance across all metrics. HepG2 presents a challenging setting with sparse DEG distributions (median 32 DEGs per perturbation), yet AdaPert consistently outperforms baselines on both global and DEG-level metrics including DE Direction Match (+3.5%) and DE Spearman LFC (+9.8%).</div>
+      <div class="caption"><b>Figure 3: Method comparison on HEPG2 unseen perturbation setting (n=496 test perturbations)</b>. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +4.3% improvement over the second-best method (TxPert), along with the best MAE Delta (-0.6%), DE Direction Match (+1.5%), and DE Spearman LFC (+2.6%). Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_BXkW/comprehensive_results/rpe1_comparison.png" alt="RPE1 Comparison">
-      <div class="caption">Figure 4: Method comparison on RPE1 unseen perturbation setting (n=461 test perturbations). Same 11 methods as K562. AdaPert achieves the highest Pearson Delta (+8.2% over TxPert), lowest MAE Delta, and best DEG-level metrics including Overlap@50 (+9.8%) and DE Spearman LFC (+1.1%). MORPH performs competitively on Discrimination L1 but falls behind on perturbation-specific metrics. Radar chart confirms AdaPert's overall dominance across the metric suite.</div>
+      <div class="caption"><b>Figure 4: Method comparison on RPE1 unseen perturbation setting (n=461 test perturbations)</b>. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +3.2% improvement over the second-best method (TxPert), along with the best MAE Delta (-3.1%), Overlap@50 (+0.9%), DE Direction Match (+0.8%), and DE Spearman LFC (+1.2%). Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_BXkW/comprehensive_results/k562_cross_comparison.png" alt="K562 Cross Cell-Line">
-      <div class="caption">Figure 5: Method comparison on K562 unseen cell line setting (n=1,087 test perturbations). Models are trained on RPE1, HEPG2, and JURKAT cell lines, then evaluated on the held-out K562 line. 10 methods compared: Perturb Mean (dashed line, perturbation-aware training-set average), Linear (GenePT), CPA, GEARS, scVI, scGPT, Morph, STATE, TxPert, and AdaPert. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. Perturb Mean is shown as a reference baseline (dashed line) since it directly copies training-set perturbation effects without generalization. Among learning-based methods, AdaPert achieves the highest Pearson Delta (0.460), lowest MAE Delta (0.035), and best DE-level metrics including DE Direction Match (0.703) and DE Spearman LFC (0.416). This cross-cell-line setting demonstrates AdaPert's ability to generalize perturbation predictions to an entirely unseen cellular context.</div>
+      <div class="caption"><b>Figure 5. Cross-cell-line evaluation on K562 cell line (modified).</b> Models are trained on three cell lines (RPE1, HEPG2, JURKAT) and evaluated on the held-out K562 cell line. Eleven methods are compared: Perturb Mean (dashed line, perturbation-aware training-set average), Linear-GenePT, Linear-OneHot, CPA, GEARS, scVI, scGPT, Morph, STATE, TxPert, and AdaPert. <b>(Top row)</b> Global metrics: Pearson Delta, MAE Delta, Discrimination L1. <b>(Bottom row)</b> DEG-level metrics: Overlap@50, DE Direction Match, DE Spearman LFC. <b>(Right)</b> Radar chart ranking all methods across 6 metrics. Perturb Mean (dashed line) achieves the highest Pearson Delta, reflecting the fact that the majority of perturbation effects are conserved across cell lines (59% of test perturbations have Perturb Mean &Delta; &ge; 0.7). Linear-GenePT (0.515) outperforms all other learning-based methods on Pearson Delta, likely benefiting from LLM-derived embeddings that encode cell-type-independent functional priors. AdaPert achieves the best performance among deep learning models (Pearson &Delta; = 0.460, MAE &Delta; = 0.035). We note that AdaPert is designed for the unseen perturbation setting; the cross-cell-line setting introduces additional challenges related to cell state variation and imbalanced perturbation conservation across training cell lines (see text for discussion).</div>
     </div>
 
     <!-- === All Tables === -->
@@ -379,10 +399,11 @@
           <tr><td>CPA</td><td>0.2877</td><td>0.0276</td><td>0.5028</td><td>0.1155</td><td>0.6454</td><td>0.3603</td></tr>
           <tr><td>scGPT</td><td>0.0792</td><td>0.0567</td><td>0.5032</td><td>0.0154</td><td>0.5283</td><td>0.0657</td></tr>
           <tr><td>STATE</td><td>0.2468</td><td>0.0412</td><td>0.5057</td><td>0.0442</td><td>0.6431</td><td>0.2977</td></tr>
+          <tr><td>Geneformer</td><td>0.3863</td><td>0.0263</td><td>0.5030</td><td>0.0050</td><td>0.7414</td><td>0.5247</td></tr>
           <tr><td>GEARS</td><td>0.2975</td><td>0.1396</td><td>0.5182</td><td>0.1226</td><td>0.6034</td><td>0.3761</td></tr>
           <tr><td>MORPH</td><td>0.4415</td><td>0.0292</td><td>0.6642</td><td>0.0569</td><td>0.7573</td><td>0.4479</td></tr>
           <tr><td>TxPert</td><td>0.5879</td><td>0.0229</td><td>0.6971</td><td>0.2426</td><td>0.8502</td><td>0.6552</td></tr>
-          <tr><td>AdaPert</td><td>0.6200</td><td>0.0220</td><td>0.7014</td><td>0.2607</td><td>0.8663</td><td>0.6745</td></tr>
+          <tr><td>AdaPert</td><td><b>0.6200</b></td><td><b>0.0220</b></td><td><b>0.7014</b></td><td><b>0.2607</b></td><td><b>0.8663</b></td><td><b>0.6745</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -398,11 +419,12 @@
           <tr><td>scVI</td><td>0.1673</td><td>0.4351</td><td>0.5009</td><td>0.0124</td><td>0.5132</td><td>0.0284</td></tr>
           <tr><td>CPA</td><td>0.3046</td><td>0.0362</td><td>0.5021</td><td>0.0285</td><td>0.6524</td><td>0.3057</td></tr>
           <tr><td>scGPT</td><td>0.0797</td><td>0.0693</td><td>0.5031</td><td>0.0108</td><td>0.5322</td><td>0.0343</td></tr>
-          <tr><td>STATE</td><td>0.1755</td><td>0.0453</td><td>0.5147</td><td>0.0229</td><td>0.6069</td><td>0.1570</td></tr>
+          <tr><td>STATE</td><td>0.1894</td><td>0.0640</td><td>0.5066</td><td>0.0221</td><td>0.6304</td><td>0.2016</td></tr>
+          <tr><td>Geneformer</td><td>0.3947</td><td>0.0349</td><td>0.5022</td><td>0.0000</td><td>0.7400</td><td>0.4389</td></tr>
           <tr><td>GEARS</td><td>0.3040</td><td>0.2948</td><td>0.5132</td><td>0.0107</td><td>0.4375</td><td>-0.1935</td></tr>
-          <tr><td>MORPH</td><td>0.3091</td><td>0.0412</td><td>0.6303</td><td>0.0145</td><td>0.6975</td><td>0.2979</td></tr>
-          <tr><td>TxPert</td><td>0.4861</td><td>0.0332</td><td>0.5909</td><td>0.0981</td><td>0.8061</td><td>0.5198</td></tr>
-          <tr><td>AdaPert</td><td>0.5003</td><td>0.0327</td><td>0.5990</td><td>0.1099</td><td>0.8127</td><td>0.5175</td></tr>
+          <tr><td>MORPH</td><td>0.3091</td><td>0.0412</td><td><b>0.6303</b></td><td>0.0145</td><td>0.6975</td><td>0.2979</td></tr>
+          <tr><td>TxPert</td><td>0.4861</td><td>0.0332</td><td>0.5909</td><td>0.0981</td><td>0.8061</td><td><b>0.5198</b></td></tr>
+          <tr><td>AdaPert</td><td><b>0.5003</b></td><td><b>0.0327</b></td><td>0.5990</td><td><b>0.1099</b></td><td><b>0.8127</b></td><td>0.5175</td></tr>
         </tbody>
       </table>
     </div>
@@ -418,11 +440,12 @@
           <tr><td>scVI</td><td>0.3397</td><td>0.0933</td><td>0.4994</td><td>0.1157</td><td>0.7033</td><td>0.4778</td></tr>
           <tr><td>CPA</td><td>0.3621</td><td>0.0376</td><td>0.5069</td><td>0.1173</td><td>0.7252</td><td>0.4753</td></tr>
           <tr><td>scGPT</td><td>0.0640</td><td>0.0713</td><td>0.5022</td><td>0.0189</td><td>0.5294</td><td>0.0897</td></tr>
-          <tr><td>STATE</td><td>0.2470</td><td>0.0439</td><td>0.5108</td><td>0.0296</td><td>0.6183</td><td>0.2258</td></tr>
+          <tr><td>STATE</td><td>0.2180</td><td>0.0466</td><td>0.5121</td><td>0.0586</td><td>0.6435</td><td>0.3054</td></tr>
+          <tr><td>Geneformer</td><td>0.3822</td><td>0.0344</td><td>0.5019</td><td>0.0000</td><td>0.7349</td><td>0.4989</td></tr>
           <tr><td>GEARS</td><td>0.2579</td><td>0.2529</td><td>0.5096</td><td>0.0132</td><td>0.3234</td><td>-0.1385</td></tr>
-          <tr><td>MORPH</td><td>0.3464</td><td>0.0387</td><td>0.6522</td><td>0.0452</td><td>0.6983</td><td>0.3534</td></tr>
-          <tr><td>TxPert</td><td>0.4502</td><td>0.0316</td><td>0.6016</td><td>0.1272</td><td>0.7902</td><td>0.5473</td></tr>
-          <tr><td>AdaPert</td><td>0.4694</td><td>0.0314</td><td>0.6158</td><td>0.1230</td><td>0.8022</td><td>0.5617</td></tr>
+          <tr><td>MORPH</td><td>0.3464</td><td>0.0387</td><td><b>0.6522</b></td><td>0.0452</td><td>0.6983</td><td>0.3534</td></tr>
+          <tr><td>TxPert</td><td>0.4502</td><td>0.0316</td><td>0.6016</td><td><b>0.1272</b></td><td>0.7902</td><td>0.5473</td></tr>
+          <tr><td>AdaPert</td><td><b>0.4694</b></td><td><b>0.0314</b></td><td>0.6158</td><td>0.1230</td><td><b>0.8022</b></td><td><b>0.5617</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -439,10 +462,11 @@
           <tr><td>CPA</td><td>0.4861</td><td>0.0428</td><td>0.5034</td><td>0.2078</td><td>0.7029</td><td>0.6586</td></tr>
           <tr><td>scGPT</td><td>0.0440</td><td>0.0841</td><td>0.5017</td><td>0.0070</td><td>0.5084</td><td>0.0315</td></tr>
           <tr><td>STATE</td><td>0.5832</td><td>0.0427</td><td>0.5196</td><td>0.2139</td><td>0.8052</td><td>0.6431</td></tr>
+          <tr><td>Geneformer</td><td>0.6316</td><td>0.0383</td><td>0.5021</td><td>0.0000</td><td>0.8446</td><td>0.7064</td></tr>
           <tr><td>GEARS</td><td>0.3963</td><td>0.2036</td><td>0.5235</td><td>0.0101</td><td>0.4715</td><td>-0.0888</td></tr>
-          <tr><td>MORPH</td><td>0.5409</td><td>0.0424</td><td>0.6885</td><td>0.0901</td><td>0.7728</td><td>0.5437</td></tr>
+          <tr><td>MORPH</td><td>0.5409</td><td>0.0424</td><td><b>0.6885</b></td><td>0.0901</td><td>0.7728</td><td>0.5437</td></tr>
           <tr><td>TxPert</td><td>0.6545</td><td>0.0357</td><td>0.6177</td><td>0.2416</td><td>0.8602</td><td>0.7144</td></tr>
-          <tr><td>AdaPert</td><td>0.6756</td><td>0.0346</td><td>0.6446</td><td>0.2438</td><td>0.8674</td><td>0.7230</td></tr>
+          <tr><td>AdaPert</td><td><b>0.6756</b></td><td><b>0.0346</b></td><td>0.6446</td><td><b>0.2438</b></td><td><b>0.8674</b></td><td><b>0.7230</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -450,18 +474,19 @@
     <div class="table-block">
       <div class="caption">Table 5: All Metrics — K562 Cross Cell-Line (trained on RPE1/HEPG2/JURKAT, tested on K562)</div>
       <table>
-        <thead><tr><th>Method</th><th>n</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. L1</th><th>Overlap@50</th><th>DE Dir. Match</th><th>DE Spearman LFC</th></tr></thead>
+        <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. L1</th><th>Overlap@50</th><th>DE Dir. Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
-          <tr><td>Perturb Mean</td><td>1051</td><td>0.6501</td><td>0.0654</td><td>0.9086</td><td>0.3480</td><td>0.8372</td><td>0.8170</td></tr>
-          <tr><td>Linear</td><td>1133</td><td>0.4809</td><td>0.0382</td><td>0.5736</td><td>0.1712</td><td>0.7446</td><td>0.4914</td></tr>
-          <tr><td>CPA</td><td>1092</td><td>0.0265</td><td>0.0471</td><td>0.5191</td><td>0.1315</td><td>0.4709</td><td>-0.0525</td></tr>
-          <tr><td>GEARS</td><td>1087</td><td>-0.0021</td><td>0.0445</td><td>0.5024</td><td>0.0000</td><td>0.4972</td><td>-0.0036</td></tr>
-          <tr><td>scVI</td><td>1092</td><td>0.1291</td><td>0.1593</td><td>0.5025</td><td>0.0958</td><td>0.5536</td><td>0.2214</td></tr>
-          <tr><td>scGPT</td><td>1087</td><td>0.0776</td><td>0.0550</td><td>0.5023</td><td>0.0117</td><td>0.5189</td><td>0.0279</td></tr>
-          <tr><td>Morph</td><td>1052</td><td>-0.1126</td><td>0.0629</td><td>0.5106</td><td>0.0370</td><td>0.4468</td><td>-0.0704</td></tr>
-          <tr><td>STAMP</td><td>1092</td><td>0.3088</td><td>0.0401</td><td>0.6984</td><td>0.0579</td><td>0.6776</td><td>&mdash;</td></tr>
-          <tr><td>TxPert</td><td>1087</td><td>0.4045</td><td>0.0358</td><td>0.6224</td><td>0.1702</td><td>0.6821</td><td>0.3763</td></tr>
-          <tr><td>AdaPert</td><td>1087</td><td>0.4601</td><td>0.0352</td><td>0.6916</td><td>0.1668</td><td>0.7027</td><td>0.4157</td></tr>
+          <tr><td>Perturb Mean</td><td><b>0.6501</b></td><td>0.0654</td><td><b>0.9086</b></td><td><b>0.3480</b></td><td><b>0.8372</b></td><td><b>0.8170</b></td></tr>
+          <tr><td>Linear-GenePT</td><td>0.5149</td><td>0.0359</td><td>0.5950</td><td>0.1714</td><td>0.7449</td><td>0.4916</td></tr>
+          <tr><td>Linear-OneHot</td><td>0.4423</td><td>0.0378</td><td>0.5212</td><td>0.1386</td><td>0.7106</td><td>0.4289</td></tr>
+          <tr><td>CPA</td><td>0.0265</td><td>0.0471</td><td>0.5191</td><td>0.1315</td><td>0.4709</td><td>-0.0525</td></tr>
+          <tr><td>GEARS</td><td>-0.0021</td><td>0.0445</td><td>0.5024</td><td>0.0000</td><td>0.4972</td><td>-0.0036</td></tr>
+          <tr><td>scVI</td><td>0.1291</td><td>0.1593</td><td>0.5025</td><td>0.0958</td><td>0.5536</td><td>0.2214</td></tr>
+          <tr><td>scGPT</td><td>0.0776</td><td>0.0550</td><td>0.5023</td><td>0.0117</td><td>0.5189</td><td>0.0279</td></tr>
+          <tr><td>Morph</td><td>-0.1126</td><td>0.0629</td><td>0.5106</td><td>0.0370</td><td>0.4468</td><td>-0.0704</td></tr>
+          <tr><td>STATE</td><td>0.3088</td><td>0.0401</td><td>0.6984</td><td>0.0579</td><td>0.6776</td><td>0.0000</td></tr>
+          <tr><td>TxPert</td><td>0.4045</td><td>0.0358</td><td>0.6224</td><td>0.1702</td><td>0.6821</td><td>0.3763</td></tr>
+          <tr><td>AdaPert</td><td>0.4601</td><td><b>0.0352</b></td><td>0.6916</td><td>0.1668</td><td>0.7027</td><td>0.4157</td></tr>
         </tbody>
       </table>
     </div>
@@ -469,28 +494,24 @@
 
   <div id="BXkW_kg" class="sub-panel">
     <div class="figure-block">
-      <img src="Reviewer_BXkW/KG_variations/kg_graph_source.png" alt="KG Graph Source">
-      <div class="caption">Figure 1: KG Variations — Graph Source Comparison</div>
+      <img src="Reviewer_BXkW/KG_variations/kg_graph_source_with_coexpress.png" alt="KG Graph Source (with Co-Expression)">
+      <div class="caption"><b>Figure 1a. Knowledge graph source comparison for perturbation prediction.</b> We tested seven knowledge graph (KG) configurations using AdaPert on the K562 single-cell dataset. All models share the same architecture and training setup, differing only in the graph source. Co-expression graphs were built from control cells (n=10,691, 5,000 genes) using absolute Pearson correlation, following the GEARS protocol (Roohani et al., 2023). We tested three sparsity levels: sparse (top-20, threshold=0.4), medium (top-10, no threshold), and dense (top-20, no threshold). We compared co-expression graphs, a Gene Ontology (GO) graph, a STRING PPI graph, their combination (STRING+GO), and a no-graph baseline. <b>(Left, Middle)</b> Pearson and Spearman correlation of expression changes (Δ) for unseen perturbations. The STRING PPI graph shows the best performance (Pearson Δ=0.6188), followed by GO (0.6047). We found two main things. <b>First, node coverage is the key factor for perturbation embedding quality</b>: co-expression graphs only cover ~5K highly variable genes, while curated KGs cover 18.2K nodes. Even when edge density increases from sparse to dense, co-expression graphs still fail to match STRING, which has 4x more node coverage. This shows that having more nodes participate in GNN message passing leads to richer perturbation embeddings. <b>Second, with enough node coverage, moderate edge density better captures perturbation-specific signals</b>: STRING outperforms the combined STRING+GO graph even though it has 3x fewer edges. This suggests that an overly dense graph adds noise and mitigate useful information. Overall, these results show that the best KG for perturbation prediction needs broad gene coverage and selective, meaningful biological edges, rather than just a high graph density. <b>(Right)</b> Graph statistics showing node coverage and edge counts for all configurations.</div>
+    </div>
+    <div class="figure-block">
+      <img src="Reviewer_BXkW/KG_variations/kg_graph_source_previous.png" alt="KG Graph Source (Previous, without Co-Expression)" style="box-shadow: 0 6px 24px rgba(0,0,0,0.35); border: 2px solid #bbb;">
+      <div class="caption"><b>Figure 1b. Knowledge graph source comparison (without co-expression baselines).</b> The same experiment as Figure 1a, showing only the four primary KG configurations: No Graph, GO, STRING+GO, and STRING.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_BXkW/KG_variations/kg_edge_density.png" alt="KG Edge Density">
-      <div class="caption">Figure 2: KG Variations — Edge Density Analysis</div>
+      <div class="caption"><b>Figure 2. Effect of edge density in the STRING PPI graph on perturbation prediction.</b> We tested how graph sparsity affects prediction quality by varying the number of neighbors kept per gene (top-K filtering) in the STRING network. All models use the same AdaPert architecture on the K562 single-cell dataset, differing only in the edge density of the input graph. We also added a perturbation-only (pert-only) baseline, which builds a graph using only the perturbed genes and their direct neighbors. <b>(Left, Middle)</b> <b>Pearson and Spearman correlation of predicted expression changes (Δ) for unseen perturbations.</b> The top-10 setup shows the best performance. Performance drops smoothly with both sparser (top-5) and denser graphs (top-50). This shows that a moderate edge density works best: too few edges limit message passing, while too many edges add noise and reduce useful biological signals. The pert-only baseline actually beats both top-20 and top-50, even though it has much fewer edges (95K vs. 342K/851K). This suggests that <b>a focused subgraph around perturbed genes</b> is more useful than a globally dense but noisy graph. <b>(Right) Graph statistics.</b> All standard STRING setups share the same 18.2K nodes, with edge counts ranging from 86K (top-5) to 851K (top-50). The pert-only graph uses a smaller node set (9.9K) and 95K edges.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_BXkW/KG_variations/context_comparison.png" alt="Context Comparison">
-      <div class="caption">Figure 3: Context Aggregation Strategy Comparison</div>
+      <div class="caption"><b>Figure 3. Comparison of adaptive vs. fixed context subgraph methods.</b> We tested four ways to extract context: No Graph (no context), Fixed 1-hop (sum of 1-hop neighbor embeddings), Fixed 2-hop (sum of 2-hop neighbor embeddings), and AdaPert (adaptively learned context) on the K562 single-cell datasets. <b>(Top row) Global metrics.</b> AdaPert shows the best Pearson Δ and the lowest MAE Δ. <b>(Bottom row) DEG-level metrics.</b> AdaPert brings steady gains across Overlap@50, DE Direction Match, and DE Spearman LFC. <b>(Right) Radar chart ranking each method across all seven metrics.</b> AdaPert ranks first in 6 out of 7 metrics. Overall, these results show that learning an adaptive subgraph captures more useful context than just using fixed neighbor connections.</div>
     </div>
-    <div class="table-block">
-      <div class="caption">Table 1: Context Aggregation Strategy Comparison — K562</div>
-      <table>
-        <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. L1</th><th>Discrim. L2</th><th>Discrim. Cosine</th><th>Overlap@50</th><th>DE Dir. Match</th><th>DE Spearman LFC</th></tr></thead>
-        <tbody>
-          <tr><td>No Graph</td><td>0.5473</td><td>0.0234</td><td>0.6653</td><td>0.6995</td><td>0.7483</td><td>0.2316</td><td>0.8327</td><td>0.6376</td></tr>
-          <tr><td>Fixed 1-hop</td><td>0.5932</td><td>0.0227</td><td>0.7051</td><td>0.7480</td><td>0.8071</td><td>0.2358</td><td>0.8519</td><td>0.6495</td></tr>
-          <tr><td>Fixed 2-hop</td><td>0.5749</td><td>0.0232</td><td>0.6820</td><td>0.7387</td><td>0.8004</td><td>0.2395</td><td>0.8437</td><td>0.6360</td></tr>
-          <tr><td>AdaPert (Adaptive)</td><td>0.6200</td><td>0.0220</td><td>0.7014</td><td>0.7557</td><td>0.8185</td><td>0.2607</td><td>0.8663</td><td>0.6745</td></tr>
-        </tbody>
-      </table>
+    <div class="figure-block">
+      <img src="Reviewer_BXkW/KG_variations/260330_polr2b_l3_final.png" alt="POLR2B Threshold Analysis">
+      <div class="caption"><b>Figure 4. Sensitivity analysis on threshold <i>T</i>.</b> We looked at how different attention thresholds (<i>T</i> &isin; {0.05, 0.08, 0.10, 0.20}) affect node selection across the perturbed gene's (<i>POLR2B</i> perturbation) <i>k</i>-hop STRING neighborhood (<i>k</i>=1 to 4). Red bars show the number of selected nodes (attention score &alpha;<sub>i</sub> &gt; <i>T</i>), while blue dashed lines show the actual number of ground-truth differentially expressed genes (DEGs). <b>(Panels 1–4)</b> At a low threshold (<i>T</i>=0.05), the model keeps almost all neighbors (100%). <span style="color:red;">At <i>T</i>=0.10, the number of selected nodes is drastically reduced, bringing it closer to the <b>scale</b> of the actual DEG count at 1-hop (2 vs. 8) and 2-hop (42 vs. 67). This suggests that the learned attention helps filter out topological noise, narrowing down the neighborhood to a more biologically focused subset.</span> At further distances (3-hop and 4-hop), <i>T</i>=0.05 still retains thousands of nodes, but <i>T</i>=0.10 sharply narrows this down to a much tighter subset (182 and 233 nodes, respectively). <b>(Rightmost) Performance across thresholds.</b> <span style="color:red;">The Pearson &Delta; peaks at <i>T</i>=0.10, suggesting that the best performance happens when the attention-selected nodes provide a reasonable approximation of the perturbation-relevant context.</span> If the threshold is too strict (<i>T</i>=0.20), the model drops too many useful nodes and performance falls. Overall, this shows that AdaPert's attention mechanism can identify perturbation-relevant genes without needing direct DEG labels during training. This finding also justifies our choice of the [0.05, 0.20] threshold range for adaptive subgraph extraction.</div>
     </div>
   </div>
 
@@ -517,23 +538,23 @@
     <!-- === All Figures === -->
     <div class="figure-block">
       <img src="Reviewer_nSvh/comprehensive_results/k562_comparison.png" alt="K562 Comparison">
-      <div class="caption">Figure 1: Method comparison on K562 unseen perturbation setting (n=272 test perturbations). 11 methods compared: Context Mean, Linear (GenePT), Linear (One-hot), scVI, CPA, STATE, scGPT, GEARS, MORPH, TxPert, and AdaPert. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +13.8% improvement over the second-best method (TxPert) and ranks first across all evaluated metrics. Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
+      <div class="caption">Figure 1: Method comparison on K562 unseen perturbation setting (n=272 test perturbations). Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +5.5% improvement over the second-best method (TxPert), along with the best Overlap@50 (+7.5%), MAE Delta (-3.8%), DE Spearman LFC (+3.0%), and DE Direction Match (+1.9%), ranking first across all evaluated metrics. Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_nSvh/comprehensive_results/jurkat_comparison.png" alt="JURKAT Comparison">
-      <div class="caption">Figure 2: Method comparison on JURKAT unseen perturbation setting (n=446 test perturbations). AdaPert achieves the highest Pearson Delta (+1.8% over TxPert), best Overlap@50 (+12.1%), DE Direction Match (+6.8%), and DE Spearman LFC. JURKAT is a T-cell leukemia line with distinct biology from the other cell lines, demonstrating AdaPert's generalization to diverse cellular contexts.</div>
+      <div class="caption"><b>Figure 2: Method comparison on JURKAT unseen perturbation setting (n=446 test perturbations)</b>. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +2.9% improvement over the second-best method (TxPert), along with the best MAE Delta (-1.6%), Overlap@50 (+12.1%), and DE Direction Match (+0.8%). Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_nSvh/comprehensive_results/hepg2_comparison.png" alt="HEPG2 Comparison">
-      <div class="caption">Figure 3: Method comparison on HEPG2 unseen perturbation setting (n=496 test perturbations). AdaPert achieves the highest Pearson Delta (+5.5% over TxPert) and competitive performance across all metrics. HepG2 presents a challenging setting with sparse DEG distributions (median 32 DEGs per perturbation), yet AdaPert consistently outperforms baselines on both global and DEG-level metrics including DE Direction Match (+3.5%) and DE Spearman LFC (+9.8%).</div>
+      <div class="caption"><b>Figure 3: Method comparison on HEPG2 unseen perturbation setting (n=496 test perturbations)</b>. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +4.3% improvement over the second-best method (TxPert), along with the best MAE Delta (-0.6%), DE Direction Match (+1.5%), and DE Spearman LFC (+2.6%). Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_nSvh/comprehensive_results/rpe1_comparison.png" alt="RPE1 Comparison">
-      <div class="caption">Figure 4: Method comparison on RPE1 unseen perturbation setting (n=461 test perturbations). Same 11 methods as K562. AdaPert achieves the highest Pearson Delta (+8.2% over TxPert), lowest MAE Delta, and best DEG-level metrics including Overlap@50 (+9.8%) and DE Spearman LFC (+1.1%). MORPH performs competitively on Discrimination L1 but falls behind on perturbation-specific metrics. Radar chart confirms AdaPert's overall dominance across the metric suite.</div>
+      <div class="caption"><b>Figure 4: Method comparison on RPE1 unseen perturbation setting (n=461 test perturbations)</b>. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +3.2% improvement over the second-best method (TxPert), along with the best MAE Delta (-3.1%), Overlap@50 (+0.9%), DE Direction Match (+0.8%), and DE Spearman LFC (+1.2%). Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_nSvh/comprehensive_results/k562_cross_comparison.png" alt="K562 Cross Cell-Line">
-      <div class="caption">Figure 5: Method comparison on K562 unseen cell line setting (n=1,087 test perturbations). Models are trained on RPE1, HEPG2, and JURKAT cell lines, then evaluated on the held-out K562 line. 10 methods compared: Perturb Mean (dashed line, perturbation-aware training-set average), Linear (GenePT), CPA, GEARS, scVI, scGPT, Morph, STATE, TxPert, and AdaPert. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. Perturb Mean is shown as a reference baseline (dashed line) since it directly copies training-set perturbation effects without generalization. Among learning-based methods, AdaPert achieves the highest Pearson Delta (0.460), lowest MAE Delta (0.035), and best DE-level metrics including DE Direction Match (0.703) and DE Spearman LFC (0.416). This cross-cell-line setting demonstrates AdaPert's ability to generalize perturbation predictions to an entirely unseen cellular context.</div>
+      <div class="caption"><b>Figure 5. Cross-cell-line evaluation on K562 cell line (modified).</b> Models are trained on three cell lines (RPE1, HEPG2, JURKAT) and evaluated on the held-out K562 cell line. Eleven methods are compared: Perturb Mean (dashed line, perturbation-aware training-set average), Linear-GenePT, Linear-OneHot, CPA, GEARS, scVI, scGPT, Morph, STATE, TxPert, and AdaPert. <b>(Top row)</b> Global metrics: Pearson Delta, MAE Delta, Discrimination L1. <b>(Bottom row)</b> DEG-level metrics: Overlap@50, DE Direction Match, DE Spearman LFC. <b>(Right)</b> Radar chart ranking all methods across 6 metrics. Perturb Mean (dashed line) achieves the highest Pearson Delta, reflecting the fact that the majority of perturbation effects are conserved across cell lines (59% of test perturbations have Perturb Mean &Delta; &ge; 0.7). Linear-GenePT (0.515) outperforms all other learning-based methods on Pearson Delta, likely benefiting from LLM-derived embeddings that encode cell-type-independent functional priors. AdaPert achieves the best performance among deep learning models (Pearson &Delta; = 0.460, MAE &Delta; = 0.035). We note that AdaPert is designed for the unseen perturbation setting; the cross-cell-line setting introduces additional challenges related to cell state variation and imbalanced perturbation conservation across training cell lines (see text for discussion).</div>
     </div>
 
     <!-- === All Tables === -->
@@ -549,10 +570,11 @@
           <tr><td>CPA</td><td>0.2877</td><td>0.0276</td><td>0.5028</td><td>0.1155</td><td>0.6454</td><td>0.3603</td></tr>
           <tr><td>scGPT</td><td>0.0792</td><td>0.0567</td><td>0.5032</td><td>0.0154</td><td>0.5283</td><td>0.0657</td></tr>
           <tr><td>STATE</td><td>0.2468</td><td>0.0412</td><td>0.5057</td><td>0.0442</td><td>0.6431</td><td>0.2977</td></tr>
+          <tr><td>Geneformer</td><td>0.3863</td><td>0.0263</td><td>0.5030</td><td>0.0050</td><td>0.7414</td><td>0.5247</td></tr>
           <tr><td>GEARS</td><td>0.2975</td><td>0.1396</td><td>0.5182</td><td>0.1226</td><td>0.6034</td><td>0.3761</td></tr>
           <tr><td>MORPH</td><td>0.4415</td><td>0.0292</td><td>0.6642</td><td>0.0569</td><td>0.7573</td><td>0.4479</td></tr>
           <tr><td>TxPert</td><td>0.5879</td><td>0.0229</td><td>0.6971</td><td>0.2426</td><td>0.8502</td><td>0.6552</td></tr>
-          <tr><td>AdaPert</td><td>0.6200</td><td>0.0220</td><td>0.7014</td><td>0.2607</td><td>0.8663</td><td>0.6745</td></tr>
+          <tr><td>AdaPert</td><td><b>0.6200</b></td><td><b>0.0220</b></td><td><b>0.7014</b></td><td><b>0.2607</b></td><td><b>0.8663</b></td><td><b>0.6745</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -568,11 +590,12 @@
           <tr><td>scVI</td><td>0.1673</td><td>0.4351</td><td>0.5009</td><td>0.0124</td><td>0.5132</td><td>0.0284</td></tr>
           <tr><td>CPA</td><td>0.3046</td><td>0.0362</td><td>0.5021</td><td>0.0285</td><td>0.6524</td><td>0.3057</td></tr>
           <tr><td>scGPT</td><td>0.0797</td><td>0.0693</td><td>0.5031</td><td>0.0108</td><td>0.5322</td><td>0.0343</td></tr>
-          <tr><td>STATE</td><td>0.1755</td><td>0.0453</td><td>0.5147</td><td>0.0229</td><td>0.6069</td><td>0.1570</td></tr>
+          <tr><td>STATE</td><td>0.1894</td><td>0.0640</td><td>0.5066</td><td>0.0221</td><td>0.6304</td><td>0.2016</td></tr>
+          <tr><td>Geneformer</td><td>0.3947</td><td>0.0349</td><td>0.5022</td><td>0.0000</td><td>0.7400</td><td>0.4389</td></tr>
           <tr><td>GEARS</td><td>0.3040</td><td>0.2948</td><td>0.5132</td><td>0.0107</td><td>0.4375</td><td>-0.1935</td></tr>
-          <tr><td>MORPH</td><td>0.3091</td><td>0.0412</td><td>0.6303</td><td>0.0145</td><td>0.6975</td><td>0.2979</td></tr>
-          <tr><td>TxPert</td><td>0.4861</td><td>0.0332</td><td>0.5909</td><td>0.0981</td><td>0.8061</td><td>0.5198</td></tr>
-          <tr><td>AdaPert</td><td>0.5003</td><td>0.0327</td><td>0.5990</td><td>0.1099</td><td>0.8127</td><td>0.5175</td></tr>
+          <tr><td>MORPH</td><td>0.3091</td><td>0.0412</td><td><b>0.6303</b></td><td>0.0145</td><td>0.6975</td><td>0.2979</td></tr>
+          <tr><td>TxPert</td><td>0.4861</td><td>0.0332</td><td>0.5909</td><td>0.0981</td><td>0.8061</td><td><b>0.5198</b></td></tr>
+          <tr><td>AdaPert</td><td><b>0.5003</b></td><td><b>0.0327</b></td><td>0.5990</td><td><b>0.1099</b></td><td><b>0.8127</b></td><td>0.5175</td></tr>
         </tbody>
       </table>
     </div>
@@ -588,11 +611,12 @@
           <tr><td>scVI</td><td>0.3397</td><td>0.0933</td><td>0.4994</td><td>0.1157</td><td>0.7033</td><td>0.4778</td></tr>
           <tr><td>CPA</td><td>0.3621</td><td>0.0376</td><td>0.5069</td><td>0.1173</td><td>0.7252</td><td>0.4753</td></tr>
           <tr><td>scGPT</td><td>0.0640</td><td>0.0713</td><td>0.5022</td><td>0.0189</td><td>0.5294</td><td>0.0897</td></tr>
-          <tr><td>STATE</td><td>0.2470</td><td>0.0439</td><td>0.5108</td><td>0.0296</td><td>0.6183</td><td>0.2258</td></tr>
+          <tr><td>STATE</td><td>0.2180</td><td>0.0466</td><td>0.5121</td><td>0.0586</td><td>0.6435</td><td>0.3054</td></tr>
+          <tr><td>Geneformer</td><td>0.3822</td><td>0.0344</td><td>0.5019</td><td>0.0000</td><td>0.7349</td><td>0.4989</td></tr>
           <tr><td>GEARS</td><td>0.2579</td><td>0.2529</td><td>0.5096</td><td>0.0132</td><td>0.3234</td><td>-0.1385</td></tr>
-          <tr><td>MORPH</td><td>0.3464</td><td>0.0387</td><td>0.6522</td><td>0.0452</td><td>0.6983</td><td>0.3534</td></tr>
-          <tr><td>TxPert</td><td>0.4502</td><td>0.0316</td><td>0.6016</td><td>0.1272</td><td>0.7902</td><td>0.5473</td></tr>
-          <tr><td>AdaPert</td><td>0.4694</td><td>0.0314</td><td>0.6158</td><td>0.1230</td><td>0.8022</td><td>0.5617</td></tr>
+          <tr><td>MORPH</td><td>0.3464</td><td>0.0387</td><td><b>0.6522</b></td><td>0.0452</td><td>0.6983</td><td>0.3534</td></tr>
+          <tr><td>TxPert</td><td>0.4502</td><td>0.0316</td><td>0.6016</td><td><b>0.1272</b></td><td>0.7902</td><td>0.5473</td></tr>
+          <tr><td>AdaPert</td><td><b>0.4694</b></td><td><b>0.0314</b></td><td>0.6158</td><td>0.1230</td><td><b>0.8022</b></td><td><b>0.5617</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -609,10 +633,11 @@
           <tr><td>CPA</td><td>0.4861</td><td>0.0428</td><td>0.5034</td><td>0.2078</td><td>0.7029</td><td>0.6586</td></tr>
           <tr><td>scGPT</td><td>0.0440</td><td>0.0841</td><td>0.5017</td><td>0.0070</td><td>0.5084</td><td>0.0315</td></tr>
           <tr><td>STATE</td><td>0.5832</td><td>0.0427</td><td>0.5196</td><td>0.2139</td><td>0.8052</td><td>0.6431</td></tr>
+          <tr><td>Geneformer</td><td>0.6316</td><td>0.0383</td><td>0.5021</td><td>0.0000</td><td>0.8446</td><td>0.7064</td></tr>
           <tr><td>GEARS</td><td>0.3963</td><td>0.2036</td><td>0.5235</td><td>0.0101</td><td>0.4715</td><td>-0.0888</td></tr>
-          <tr><td>MORPH</td><td>0.5409</td><td>0.0424</td><td>0.6885</td><td>0.0901</td><td>0.7728</td><td>0.5437</td></tr>
+          <tr><td>MORPH</td><td>0.5409</td><td>0.0424</td><td><b>0.6885</b></td><td>0.0901</td><td>0.7728</td><td>0.5437</td></tr>
           <tr><td>TxPert</td><td>0.6545</td><td>0.0357</td><td>0.6177</td><td>0.2416</td><td>0.8602</td><td>0.7144</td></tr>
-          <tr><td>AdaPert</td><td>0.6756</td><td>0.0346</td><td>0.6446</td><td>0.2438</td><td>0.8674</td><td>0.7230</td></tr>
+          <tr><td>AdaPert</td><td><b>0.6756</b></td><td><b>0.0346</b></td><td>0.6446</td><td><b>0.2438</b></td><td><b>0.8674</b></td><td><b>0.7230</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -620,65 +645,68 @@
     <div class="table-block">
       <div class="caption">Table 5: All Metrics — K562 Cross Cell-Line (trained on RPE1/HEPG2/JURKAT, tested on K562)</div>
       <table>
-        <thead><tr><th>Method</th><th>n</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. L1</th><th>Overlap@50</th><th>DE Dir. Match</th><th>DE Spearman LFC</th></tr></thead>
+        <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. L1</th><th>Overlap@50</th><th>DE Dir. Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
-          <tr><td>Perturb Mean</td><td>1051</td><td>0.6501</td><td>0.0654</td><td>0.9086</td><td>0.3480</td><td>0.8372</td><td>0.8170</td></tr>
-          <tr><td>Linear</td><td>1133</td><td>0.4809</td><td>0.0382</td><td>0.5736</td><td>0.1712</td><td>0.7446</td><td>0.4914</td></tr>
-          <tr><td>CPA</td><td>1092</td><td>0.0265</td><td>0.0471</td><td>0.5191</td><td>0.1315</td><td>0.4709</td><td>-0.0525</td></tr>
-          <tr><td>GEARS</td><td>1087</td><td>-0.0021</td><td>0.0445</td><td>0.5024</td><td>0.0000</td><td>0.4972</td><td>-0.0036</td></tr>
-          <tr><td>scVI</td><td>1092</td><td>0.1291</td><td>0.1593</td><td>0.5025</td><td>0.0958</td><td>0.5536</td><td>0.2214</td></tr>
-          <tr><td>scGPT</td><td>1087</td><td>0.0776</td><td>0.0550</td><td>0.5023</td><td>0.0117</td><td>0.5189</td><td>0.0279</td></tr>
-          <tr><td>Morph</td><td>1052</td><td>-0.1126</td><td>0.0629</td><td>0.5106</td><td>0.0370</td><td>0.4468</td><td>-0.0704</td></tr>
-          <tr><td>STAMP</td><td>1092</td><td>0.3088</td><td>0.0401</td><td>0.6984</td><td>0.0579</td><td>0.6776</td><td>&mdash;</td></tr>
-          <tr><td>TxPert</td><td>1087</td><td>0.4045</td><td>0.0358</td><td>0.6224</td><td>0.1702</td><td>0.6821</td><td>0.3763</td></tr>
-          <tr><td>AdaPert</td><td>1087</td><td>0.4601</td><td>0.0352</td><td>0.6916</td><td>0.1668</td><td>0.7027</td><td>0.4157</td></tr>
+          <tr><td>Perturb Mean</td><td><b>0.6501</b></td><td>0.0654</td><td><b>0.9086</b></td><td><b>0.3480</b></td><td><b>0.8372</b></td><td><b>0.8170</b></td></tr>
+          <tr><td>Linear-GenePT</td><td>0.5149</td><td>0.0359</td><td>0.5950</td><td>0.1714</td><td>0.7449</td><td>0.4916</td></tr>
+          <tr><td>Linear-OneHot</td><td>0.4423</td><td>0.0378</td><td>0.5212</td><td>0.1386</td><td>0.7106</td><td>0.4289</td></tr>
+          <tr><td>CPA</td><td>0.0265</td><td>0.0471</td><td>0.5191</td><td>0.1315</td><td>0.4709</td><td>-0.0525</td></tr>
+          <tr><td>GEARS</td><td>-0.0021</td><td>0.0445</td><td>0.5024</td><td>0.0000</td><td>0.4972</td><td>-0.0036</td></tr>
+          <tr><td>scVI</td><td>0.1291</td><td>0.1593</td><td>0.5025</td><td>0.0958</td><td>0.5536</td><td>0.2214</td></tr>
+          <tr><td>scGPT</td><td>0.0776</td><td>0.0550</td><td>0.5023</td><td>0.0117</td><td>0.5189</td><td>0.0279</td></tr>
+          <tr><td>Morph</td><td>-0.1126</td><td>0.0629</td><td>0.5106</td><td>0.0370</td><td>0.4468</td><td>-0.0704</td></tr>
+          <tr><td>STATE</td><td>0.3088</td><td>0.0401</td><td>0.6984</td><td>0.0579</td><td>0.6776</td><td>0.0000</td></tr>
+          <tr><td>TxPert</td><td>0.4045</td><td>0.0358</td><td>0.6224</td><td>0.1702</td><td>0.6821</td><td>0.3763</td></tr>
+          <tr><td>AdaPert</td><td>0.4601</td><td><b>0.0352</b></td><td>0.6916</td><td>0.1668</td><td>0.7027</td><td>0.4157</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
   <div id="nSvh_downstream" class="sub-panel">
-    <div class="figure-block">
-      <img src="Reviewer_nSvh/downs_stream_analysis/260330_deg_recovery_table.png" alt="DEG Recovery" style="max-width:700px;">
-      <div class="caption">Figure 1: DEG identification accuracy across methods on K562 test set (n=272 perturbations). Overlap@K: fraction of ground-truth DEGs (FDR &lt; 0.05) recovered in top-K predicted DE genes. Direction Accuracy: fraction of DEGs with correctly predicted regulation direction. DEG Recall: fraction of true significant genes identified as significant by predicted profiles. P-values from two-sided Wilcoxon signed-rank tests, paired by perturbation (AdaPert vs. TxPert). Best values highlighted in red. AdaPert significantly outperforms TxPert on Overlap@100 (0.258 vs. 0.235, p = 3.6&times;10&minus;8), Overlap@200 (0.250 vs. 0.225, p = 1.9&times;10&minus;14), and Direction Accuracy (0.866 vs. 0.850, p = 7.3&times;10&minus;3).</div>
-    </div>
-    <div class="figure-block">
-      <img src="Reviewer_nSvh/downs_stream_analysis/260330_pathway_recovery_summary.png" alt="Pathway Recovery">
-      <div class="caption">Figure 2: Pathway recovery from predicted expression profiles via GSEA (MSigDB Hallmark 2020, 300 permutations) across 272 test perturbations. Left: Pathway Recovery Rate &mdash; fraction of ground-truth significant pathways (FDR &lt; 0.25) also identified as significant in predictions. Center: NES Correlation &mdash; Pearson r between predicted and ground-truth Normalized Enrichment Scores across matched pathways. Right: Direction Accuracy &mdash; fraction of pathways with correctly predicted enrichment direction (up/down). Diamonds denote means; boxes span IQR. AdaPert achieves the highest recovery rate (0.200 vs. 0.179 for TxPert, 0.114 for Linear) and direction accuracy (0.573 vs. 0.563, 0.532).</div>
-    </div>
-    <div class="figure-block">
-      <img src="Reviewer_nSvh/downs_stream_analysis/260330_perturbation_ranking.png" alt="Perturbation Ranking">
-      <div class="caption">Figure 3: Perturbation ranking accuracy by pathway effect. For each of 44 Hallmark pathways (&ge;20 perturbations with valid GSEA), all 272 test perturbations are ranked by predicted NES and compared with ground-truth rankings via Spearman &rho;. Left: overall distribution across pathways. Right: per-pathway comparison for selected pathways sorted by AdaPert advantage. AdaPert (mean &rho; = 0.207) and TxPert (0.205) substantially outperform Linear (0.082). AdaPert shows notable advantages on Glycolysis, Bile Acid Metabolism, and mTORC1 Signaling pathways.</div>
+    <div class="two-col">
+      <div class="col-left">
+        <div class="figure-block">
+          <img src="Reviewer_nSvh/downs_stream_analysis/260330_deg_recovery_table.png" alt="DEG Recovery">
+          <div class="caption"><b>Figure 1. DEG identification accuracy across methods on the K562 single cell dataset.</b> We measured performance using three metrics. Overlap@K evaluates the fraction of ground-truth DEGs (FDR &lt; 0.05) successfully recovered within the top-K predicted genes. Direction Accuracy tracks the fraction of DEGs where the model correctly predicts the regulation direction. DEG Recall measures the fraction of true significant genes that are also identified as significant in the predicted profiles. Best values are highlighted in red. We calculated p-values using two-sided Wilcoxon signed-rank tests, paired by perturbation (AdaPert vs. TxPert). Overall, AdaPert shows a clear advantage over TxPert.</div>
+        </div>
+        <div class="figure-block">
+          <img src="Reviewer_nSvh/downs_stream_analysis/260330_pathway_recovery_summary.png" alt="Pathway Recovery">
+          <div class="caption"><b>Figure 2. Downstream Pathway Analysis (Quantitative Analysis).</b> We evaluated pathway recovery using Gene Set Enrichment Analysis (GSEA) across 272 test perturbations <span style="color:red;">in K562 single cells. As a well-characterized human leukemia model, K562 serves as a standard benchmark in genomics, providing a robust and reproducible baseline for studying perturbation effects.</span> We evaluated <span style="color:red;">the complete set of</span> MSigDB Hallmark 2020 pathways (300 permutations). <span style="color:red;">These hallmark pathways summarize specific, well-defined biological states (e.g., cell cycle, immune response). High recovery on this metric demonstrates that the model successfully captures the broad functional consequences of a perturbation, translating raw gene expression changes into meaningful biological insights.</span> <b>(Left) Pathway Recovery Rate.</b> This tracks the fraction of ground-truth significant pathways (FDR &lt; 0.25) that are also successfully identified as significant in the predictions. <b>(Center) NES Correlation.</b> The Pearson <i>r</i> between predicted and ground-truth Normalized Enrichment Scores across matched pathways. <b>(Right) Enrichment Direction Accuracy.</b> The fraction of pathways where the model correctly predicts the enrichment direction (up or down). In the plots, diamonds represent mean values, while boxes span the interquartile range (IQR). Overall, AdaPert shows the best recovery rate. It also provides the highest direction accuracy.</div>
+        </div>
+        <div class="figure-block">
+          <img src="Reviewer_nSvh/downs_stream_analysis/260330_perturbation_ranking.png" alt="Perturbation Ranking">
+          <div class="caption"><b>Figure 3. Perturbation ranking by pathway effect on K562 (n=272 perturbations).</b> This figure was presented in our first-round rebuttal, showing a selected subset of the 50 MSigDB Hallmark pathways. For each pathway, we ran GSEA on both real and predicted expression profiles, then measured how well each method ranks perturbations by their pathway effect using Spearman &rho;. <b>(Left) Overall distribution</b> of Spearman &rho; across pathways. AdaPert (mean &rho;=0.207) and TxPert (0.205) show comparable overall performance. <b>(Right) Per-pathway breakdown</b> for the selected subset. At first glance, AdaPert and TxPert appear similar in overall ranking accuracy. However, following the reviewer's suggestion to report all pathways, we extended the analysis to the complete set of 50 Hallmark pathways <b>(Figure 4)</b>, which revealed a clear pattern: AdaPert's advantages concentrate on pathways with established biological relevance to K562 (a CML/erythroleukemia cell line), such as Heme Metabolism, Glycolysis, mTORC1 Signaling, and P53 Pathway. While TxPert edges ahead on more general pathways (e.g., Interferon Alpha Response, Dna Repair). This distinction is not apparent from the overall summary alone, and highlights that AdaPert preferentially captures cell-type-specific biological signals. See Figure 4 for the full pathway-level comparison with K562-relevant annotations.</div>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="figure-block">
+          <img src="Reviewer_nSvh/downs_stream_analysis/260404_perturbation_ranking_dotplot.png" alt="Perturbation Ranking Dotplot">
+          <div class="caption"><b>Figure 4. Perturbation ranking accuracy across all 50 MSigDB Hallmark pathways on K562.</b> For each pathway, we compute the ground-truth Normalized Enrichment Score (NES) from GSEA on real expression profiles, repeat the same analysis on predicted profiles, and measure how well each method ranks perturbations by pathway effect using Spearman &rho;. Pathways are sorted by AdaPert's &rho; (descending). Three methods are compared: AdaPert (ours), TxPert, and Linear-GenePT, evaluated on 272 unseen test perturbations. <span style="color:red;">K562 is a chronic myeloid leukemia (CML) / erythroleukemia cell line widely used in large-scale Perturb-seq studies. Pathways with established biological relevance to K562 are highlighted (orange background, bold red labels), including heme metabolism (a defining feature of erythroleukemia), glycolysis (Warburg effect), mTORC1 and PI3K/AKT/mTOR signaling (downstream of the BCR-ABL oncogene), cholesterol homeostasis (leukemic lipid reprogramming), P53 pathway, and unfolded protein response</span>. AdaPert outperforms TxPert on <b>9 of 12 K562-relevant pathways</b>, with the strongest advantages on core metabolic pathways: Cholesterol Homeostasis, Heme Metabolism, Glycolysis, and mTORC1 Signaling. A small number of pathways (e.g., DNA Repair, Kras Signaling Dn) show negative correlations across all methods, indicating pathway-level signals that remain challenging for current perturbation prediction approaches.</div>
+        </div>
+      </div>
     </div>
   </div>
   <div id="nSvh_kg" class="sub-panel">
     <div class="figure-block">
-      <img src="Reviewer_nSvh/KG_variations/kg_graph_source.png" alt="KG Graph Source">
-      <div class="caption">Figure 1: KG Variations — Graph Source Comparison</div>
+      <img src="Reviewer_nSvh/KG_variations/kg_graph_source_with_coexpress.png" alt="KG Graph Source (with Co-Expression)">
+      <div class="caption"><b>Figure 1a. Knowledge graph source comparison for perturbation prediction.</b> We tested seven knowledge graph (KG) configurations using AdaPert on the K562 single-cell dataset. All models share the same architecture and training setup, differing only in the graph source. Co-expression graphs were built from control cells (n=10,691, 5,000 genes) using absolute Pearson correlation, following the GEARS protocol (Roohani et al., 2023). We tested three sparsity levels: sparse (top-20, threshold=0.4), medium (top-10, no threshold), and dense (top-20, no threshold). We compared co-expression graphs, a Gene Ontology (GO) graph, a STRING PPI graph, their combination (STRING+GO), and a no-graph baseline. <b>(Left, Middle)</b> Pearson and Spearman correlation of expression changes (Δ) for unseen perturbations. The STRING PPI graph shows the best performance (Pearson Δ=0.6188), followed by GO (0.6047). We found two main things. <b>First, node coverage is the key factor for perturbation embedding quality</b>: co-expression graphs only cover ~5K highly variable genes, while curated KGs cover 18.2K nodes. Even when edge density increases from sparse to dense, co-expression graphs still fail to match STRING, which has 4x more node coverage. This shows that having more nodes participate in GNN message passing leads to richer perturbation embeddings. <b>Second, with enough node coverage, moderate edge density better captures perturbation-specific signals</b>: STRING outperforms the combined STRING+GO graph even though it has 3x fewer edges. This suggests that an overly dense graph adds noise and mitigate useful information. Overall, these results show that the best KG for perturbation prediction needs broad gene coverage and selective, meaningful biological edges, rather than just a high graph density. <b>(Right)</b> Graph statistics showing node coverage and edge counts for all configurations.</div>
+    </div>
+    <div class="figure-block">
+      <img src="Reviewer_nSvh/KG_variations/kg_graph_source_previous.png" alt="KG Graph Source (Previous, without Co-Expression)" style="box-shadow: 0 6px 24px rgba(0,0,0,0.35); border: 2px solid #bbb;">
+      <div class="caption"><b>Figure 1b. Knowledge graph source comparison (without co-expression baselines).</b> The same experiment as Figure 1a, showing only the four primary KG configurations: No Graph, GO, STRING+GO, and STRING.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_nSvh/KG_variations/kg_edge_density.png" alt="KG Edge Density">
-      <div class="caption">Figure 2: KG Variations — Edge Density Analysis</div>
+      <div class="caption"><b>Figure 2. Effect of edge density in the STRING PPI graph on perturbation prediction.</b> We tested how graph sparsity affects prediction quality by varying the number of neighbors kept per gene (top-K filtering) in the STRING network. All models use the same AdaPert architecture on the K562 single-cell dataset, differing only in the edge density of the input graph. We also added a perturbation-only (pert-only) baseline, which builds a graph using only the perturbed genes and their direct neighbors. <b>(Left, Middle)</b> <b>Pearson and Spearman correlation of predicted expression changes (Δ) for unseen perturbations.</b> The top-10 setup shows the best performance. Performance drops smoothly with both sparser (top-5) and denser graphs (top-50). This shows that a moderate edge density works best: too few edges limit message passing, while too many edges add noise and reduce useful biological signals. The pert-only baseline actually beats both top-20 and top-50, even though it has much fewer edges (95K vs. 342K/851K). This suggests that <b>a focused subgraph around perturbed genes</b> is more useful than a globally dense but noisy graph. <b>(Right) Graph statistics.</b> All standard STRING setups share the same 18.2K nodes, with edge counts ranging from 86K (top-5) to 851K (top-50). The pert-only graph uses a smaller node set (9.9K) and 95K edges.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_nSvh/KG_variations/context_comparison.png" alt="Context Comparison">
-      <div class="caption">Figure 3: Context Aggregation Strategy Comparison</div>
-    </div>
-    <div class="table-block">
-      <div class="caption">Table 1: Context Aggregation Strategy Comparison — K562</div>
-      <table>
-        <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. L1</th><th>Discrim. L2</th><th>Discrim. Cosine</th><th>Overlap@50</th><th>DE Dir. Match</th><th>DE Spearman LFC</th></tr></thead>
-        <tbody>
-          <tr><td>No Graph</td><td>0.5473</td><td>0.0234</td><td>0.6653</td><td>0.6995</td><td>0.7483</td><td>0.2316</td><td>0.8327</td><td>0.6376</td></tr>
-          <tr><td>Fixed 1-hop</td><td>0.5932</td><td>0.0227</td><td>0.7051</td><td>0.7480</td><td>0.8071</td><td>0.2358</td><td>0.8519</td><td>0.6495</td></tr>
-          <tr><td>Fixed 2-hop</td><td>0.5749</td><td>0.0232</td><td>0.6820</td><td>0.7387</td><td>0.8004</td><td>0.2395</td><td>0.8437</td><td>0.6360</td></tr>
-          <tr><td>AdaPert (Adaptive)</td><td>0.6200</td><td>0.0220</td><td>0.7014</td><td>0.7557</td><td>0.8185</td><td>0.2607</td><td>0.8663</td><td>0.6745</td></tr>
-        </tbody>
-      </table>
+      <div class="caption"><b>Figure 3. Comparison of adaptive vs. fixed context subgraph methods.</b> We tested four ways to extract context: No Graph (no context), Fixed 1-hop (sum of 1-hop neighbor embeddings), Fixed 2-hop (sum of 2-hop neighbor embeddings), and AdaPert (adaptively learned context) on the K562 single-cell datasets. <b>(Top row) Global metrics.</b> AdaPert shows the best Pearson Δ and the lowest MAE Δ. <b>(Bottom row) DEG-level metrics.</b> AdaPert brings steady gains across Overlap@50, DE Direction Match, and DE Spearman LFC. <b>(Right) Radar chart ranking each method across all seven metrics.</b> AdaPert ranks first in 6 out of 7 metrics. Overall, these results show that learning an adaptive subgraph captures more useful context than just using fixed neighbor connections.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_nSvh/KG_variations/260330_polr2b_l3_final.png" alt="POLR2B Threshold Analysis">
-      <div class="caption">Figure 4: Attention-based threshold analysis for adaptive subgraph extraction (POLR2B perturbation, Layer 3 of 4-layer GATv2). For each attention threshold T &isin; {0.05, 0.08, 0.10, 0.20}, red bars show the number of high-attention nodes (max head attention &gt; T) within the perturbation gene's k-hop STRING neighborhood (1-hop to 4-hop). Blue dashed lines indicate the number of ground-truth DEGs at each hop distance. Rightmost panel: Pearson Delta performance across thresholds. At T=0.05, nearly all neighbors are retained (100%); at T=0.10, the selected node count approaches the DEG count at 1-hop (11 vs. 8) and 2-hop (42 vs. 67), coinciding with peak performance (Pearson Delta = 0.6199). At T=0.20, excessive filtering removes too many informative nodes and performance decreases. This analysis motivates the threshold range [0.05, 0.20] and identifies T=0.10 as optimal.</div>
+      <div class="caption"><b>Figure 4. Sensitivity analysis on threshold <i>T</i>.</b> We looked at how different attention thresholds (<i>T</i> &isin; {0.05, 0.08, 0.10, 0.20}) affect node selection across the perturbed gene's (<i>POLR2B</i> perturbation) <i>k</i>-hop STRING neighborhood (<i>k</i>=1 to 4). Red bars show the number of selected nodes (attention score &alpha;<sub>i</sub> &gt; <i>T</i>), while blue dashed lines show the actual number of ground-truth differentially expressed genes (DEGs). <b>(Panels 1–4)</b> At a low threshold (<i>T</i>=0.05), the model keeps almost all neighbors (100%). <span style="color:red;">At <i>T</i>=0.10, the number of selected nodes is drastically reduced, bringing it closer to the <b>scale</b> of the actual DEG count at 1-hop (2 vs. 8) and 2-hop (42 vs. 67). This suggests that the learned attention helps filter out topological noise, narrowing down the neighborhood to a more biologically focused subset.</span> At further distances (3-hop and 4-hop), <i>T</i>=0.05 still retains thousands of nodes, but <i>T</i>=0.10 sharply narrows this down to a much tighter subset (182 and 233 nodes, respectively). <b>(Rightmost) Performance across thresholds.</b> <span style="color:red;">The Pearson &Delta; peaks at <i>T</i>=0.10, suggesting that the best performance happens when the attention-selected nodes provide a reasonable approximation of the perturbation-relevant context.</span> If the threshold is too strict (<i>T</i>=0.20), the model drops too many useful nodes and performance falls. Overall, this shows that AdaPert's attention mechanism can identify perturbation-relevant genes without needing direct DEG labels during training. This finding also justifies our choice of the [0.05, 0.20] threshold range for adaptive subgraph extraction.</div>
     </div>
   </div>
   <div id="nSvh_collapse" class="sub-panel">
