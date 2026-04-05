@@ -217,7 +217,7 @@
   <div id="mrYu_DEG" class="sub-panel active">
     <div class="figure-block">
       <img src="Reviewer_mrYu/DEG/deg_sensitivity_grid_heatmap.png" alt="DEG Sensitivity Grid Heatmap">
-      <div class="caption">Figure 1: Sensitivity of AdaPert to DEG definition thresholds across three cell lines (K562, JURKAT, RPE1). Each row corresponds to a dataset. The first column (orange) shows the average number of DEGs per perturbation under each threshold combination. The remaining six columns (blue) show prediction performance across six evaluation metrics: Pearson Delta, MAE Delta, Discrimination L1, Overlap@50, DE Spearman LFC, and DE Direction Match. Stricter thresholds substantially reduce the number of DEGs used during training (e.g., K562: 641→229, JURKAT: 222→63, RPE1: 505→228) but have minimal impact on prediction performance across all six metrics. For instance, Pearson Delta varies by less than 1.3% in K562, 2.1% in JURKAT, and 0.7% in RPE1. FDR<0.05 with |LFC|>0.25 consistently yields the best or near-best performance, demonstrating that AdaPert is robust to the specific DEG definition.</div>
+      <div class="caption"><b>Figure 1: Sensitivity of AdaPert to DEG definition thresholds across three cell lines (K562, JURKAT, RPE1).</b> Each row corresponds to a dataset. The first column (orange) shows the average number of DEGs per perturbation under each threshold combination. The remaining six columns (blue) show prediction performance across six evaluation metrics: Pearson Delta, MAE Delta, Discrimination L1, Overlap@50, DE Spearman LFC, and DE Direction Match. Stricter thresholds substantially reduce the number of DEGs used during training (e.g., K562: 641→229, JURKAT: 222→63, RPE1: 505→228) but have minimal impact on prediction performance across all six metrics. For instance, Pearson Delta varies by less than 1.3% in K562, 2.1% in JURKAT, and 0.7% in RPE1. FDR<0.05 with |LFC|>0.25 consistently yields the best or near-best performance, demonstrating that AdaPert is robust to the specific DEG definition.</div>
     </div>
   </div>
 
@@ -225,7 +225,7 @@
   <div id="mrYu_adaptive_learning" class="sub-panel">
     <div class="figure-block">
       <img src="Reviewer_mrYu/Adaptive/inference_detail.png" alt="Inference Detail">
-      <div class="caption">Figure 1: Detailed illustration of AdaPert's adaptive learning step at inference for an unseen perturbation gene. (Top-left) The perturbation gene is located on a shared KG template (STRING PPI network). A 4-layer GATv2 with skip-cat connections produces structural node embeddings while a pre-trained language model (GenePertESM) provides semantic embeddings. (Middle) A subgraph scoring function computes perturbation-conditioned attention weights for each neighbor by jointly leveraging structural and semantic features. Neighbors exceeding a threshold are selected to form the context subgraph, which adaptively varies in size per perturbation. (Bottom) The encoder maps control cell expression to a basal state representation. The context vector is computed via attention-weighted sum pooling over selected neighbors. The decoder takes the concatenation of basal state, context vector, and semantic embedding to predict perturbed gene expression. Crucially, the GNN and subgraph scoring operate on a fixed KG template shared across all perturbations — the adaptive step is purely attention-based, requiring no perturbation-specific graph construction at inference time.</div>
+      <div class="caption"><b>Figure 1: Detailed illustration of AdaPert's adaptive learning step at inference for an unseen perturbation gene.</b> (Top-left) The perturbation gene is located on a shared KG template (STRING PPI network). A 4-layer GATv2 with skip-cat connections produces structural node embeddings while a pre-trained language model (GenePertESM) provides semantic embeddings. (Middle) A subgraph scoring function computes perturbation-conditioned attention weights for each neighbor by jointly leveraging structural and semantic features. Neighbors exceeding a threshold are selected to form the context subgraph, which adaptively varies in size per perturbation. (Bottom) The encoder maps control cell expression to a basal state representation. The context vector is computed via attention-weighted sum pooling over selected neighbors. The decoder takes the concatenation of basal state, context vector, and semantic embedding to predict perturbed gene expression. Crucially, the GNN and subgraph scoring operate on a fixed KG template shared across all perturbations — the adaptive step is purely attention-based, requiring no perturbation-specific graph construction at inference time.</div>
     </div>
   </div>
 
@@ -234,28 +234,28 @@
     <!-- === All Figures === -->
     <div class="figure-block">
       <img src="Reviewer_mrYu/systema/systema_evaluation_K562.png" alt="K562">
-      <div class="caption">Figure 1: Systema evaluation on K562 unseen perturbation setting (n=272 perturbations, 12 methods). Five metrics shown: PearsonΔ with perturbation reference (all genes and top-20 DE genes), PearsonΔ with control reference (all genes and top-20), and Centroid Accuracy. AdaPert achieves the best performance across all five metrics (PΔ_pert=0.534, PΔ20_pert=0.599, centroid=0.810), substantially outperforming TxPert (0.483, 0.550, 0.779) and all other baselines. Notably, STATE (−0.054) and matching-mean (−0.119) produce negative PΔ_pert, indicating predictions worse than random on this dataset.</div>
+      <div class="caption"><b>Figure 1: Systema evaluation on K562 unseen perturbation setting (n=272 perturbations, 12 methods).</b> Five metrics shown: PearsonΔ with perturbation reference (all genes and top-20 DE genes), PearsonΔ with control reference (all genes and top-20), and Centroid Accuracy. AdaPert achieves the best performance across all five metrics (PΔ_pert=0.534, PΔ20_pert=0.599, centroid=0.810), substantially outperforming TxPert (0.483, 0.550, 0.779) and all other baselines. Notably, STATE (−0.054) and matching-mean (−0.119) produce negative PΔ_pert, indicating predictions worse than random on this dataset.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_mrYu/systema/systema_evaluation_JURKAT.png" alt="JURKAT">
-      <div class="caption">Figure 2: Systema evaluation on JURKAT unseen perturbation setting (n=446 perturbations). AdaPert achieves the best PΔ_pert (0.345), PΔ20_pert (0.380), and centroid accuracy (0.687). TxPert follows closely (0.313, 0.329, 0.675). MORPH is competitive on centroid accuracy (0.676) but lower on perturbation-reference metrics. Foundation models (scGPT, scVI) and STATE show limited effectiveness.</div>
+      <div class="caption"><b>Figure 2: Systema evaluation on JURKAT unseen perturbation setting (n=446 perturbations).</b> AdaPert achieves the best PΔ_pert (0.345), PΔ20_pert (0.380), and centroid accuracy (0.687). TxPert follows closely (0.313, 0.329, 0.675). MORPH is competitive on centroid accuracy (0.676) but lower on perturbation-reference metrics. Foundation models (scGPT, scVI) and STATE show limited effectiveness.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_mrYu/systema/systema_evaluation_HEPG2.png" alt="HEPG2">
-      <div class="caption">Figure 3: Systema evaluation on HEPG2 unseen perturbation setting (n=496 perturbations). AdaPert leads with PΔ_pert=0.394, PΔ20_pert=0.384, and centroid accuracy=0.685. TxPert follows at 0.359. MORPH shows strong centroid accuracy (0.681) but lower PΔ_pert (0.284). CPA and matching-mean produce negative PΔ_pert, failing to capture perturbation-specific effects in this sparse-DEG dataset.</div>
+      <div class="caption"><b>Figure 3: Systema evaluation on HEPG2 unseen perturbation setting (n=496 perturbations).</b> AdaPert leads with PΔ_pert=0.394, PΔ20_pert=0.384, and centroid accuracy=0.685. TxPert follows at 0.359. MORPH shows strong centroid accuracy (0.681) but lower PΔ_pert (0.284). CPA and matching-mean produce negative PΔ_pert, failing to capture perturbation-specific effects in this sparse-DEG dataset.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_mrYu/systema/systema_evaluation_RPE1.png" alt="RPE1">
-      <div class="caption">Figure 4: Systema evaluation on RPE1 unseen perturbation setting (n=461 perturbations). AdaPert achieves the best PΔ_pert (0.379) and PΔ20_ctrl (highest among perturbation-aware methods), with centroid accuracy of 0.691. TxPert follows at 0.357. MORPH achieves competitive PΔ20_pert (0.365) but lower perturbation-reference metrics. Linear baselines and foundation models (scGPT, scVI) lag substantially behind.</div>
+      <div class="caption"><b>Figure 4: Systema evaluation on RPE1 unseen perturbation setting (n=461 perturbations).</b> AdaPert achieves the best PΔ_pert (0.379) and PΔ20_ctrl (highest among perturbation-aware methods), with centroid accuracy of 0.691. TxPert follows at 0.357. MORPH achieves competitive PΔ20_pert (0.365) but lower perturbation-reference metrics. Linear baselines and foundation models (scGPT, scVI) lag substantially behind.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_mrYu/systema/systema_evaluation_K562cross.png" alt="K562 Cross">
-      <div class="caption">Figure 5: Systema evaluation on K562 unseen cell line setting (n=1,087 perturbations; trained on RPE1+HEPG2+JURKAT, tested on K562). AdaPert achieves the highest PΔ_pert (0.783), PΔ20_pert (0.733), and centroid accuracy (0.689), outperforming the second-best STATE (0.718, 0.658, 0.622) by a substantial margin. This challenging cross-cell-line transfer setting demonstrates AdaPert's ability to generalize perturbation predictions to entirely unseen cellular contexts with different gene regulation programs.</div>
+      <div class="caption"><b>Figure 5: Systema evaluation on K562 unseen cell line setting (n=1,087 perturbations; trained on RPE1+HEPG2+JURKAT, tested on K562).</b> AdaPert achieves the highest PΔ_pert (0.783), PΔ20_pert (0.733), and centroid accuracy (0.689), outperforming the second-best STATE (0.718, 0.658, 0.622) by a substantial margin. This challenging cross-cell-line transfer setting demonstrates AdaPert's ability to generalize perturbation predictions to entirely unseen cellular contexts with different gene regulation programs.</div>
     </div>
 
     <!-- === All Tables === -->
     <div class="table-block">
-      <div class="caption">Table 1: Systema Evaluation Metrics — K562</div>
+      <div class="caption"><b>Table 1: Systema Evaluation Metrics — K562</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson&Delta; (Pert, All)</th><th>Pearson&Delta;20 (Pert)</th><th>Pearson&Delta; (Ctrl, All)</th><th>Pearson&Delta;20 (Ctrl)</th><th>N Cond.</th><th>Centroid Acc.</th></tr></thead>
         <tbody>
@@ -275,7 +275,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 2: Systema Evaluation Metrics — JURKAT</div>
+      <div class="caption"><b>Table 2: Systema Evaluation Metrics — JURKAT</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson&Delta; (Pert, All)</th><th>Pearson&Delta;20 (Pert)</th><th>Pearson&Delta; (Ctrl, All)</th><th>Pearson&Delta;20 (Ctrl)</th><th>N Cond.</th><th>Centroid Acc.</th></tr></thead>
         <tbody>
@@ -295,7 +295,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 3: Systema Evaluation Metrics — HEPG2</div>
+      <div class="caption"><b>Table 3: Systema Evaluation Metrics — HEPG2</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson&Delta; (Pert, All)</th><th>Pearson&Delta;20 (Pert)</th><th>Pearson&Delta; (Ctrl, All)</th><th>Pearson&Delta;20 (Ctrl)</th><th>N Cond.</th><th>Centroid Acc.</th></tr></thead>
         <tbody>
@@ -315,7 +315,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 4: Systema Evaluation Metrics — RPE1</div>
+      <div class="caption"><b>Table 4: Systema Evaluation Metrics — RPE1</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson&Delta; (Pert, All)</th><th>Pearson&Delta;20 (Pert)</th><th>Pearson&Delta; (Ctrl, All)</th><th>Pearson&Delta;20 (Ctrl)</th><th>N Cond.</th><th>Centroid Acc.</th></tr></thead>
         <tbody>
@@ -335,7 +335,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 5: Systema Evaluation Metrics — K562 Cross-cell-line</div>
+      <div class="caption"><b>Table 5: Systema Evaluation Metrics — K562 Cross-cell-line</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson&Delta; (Pert, All)</th><th>Pearson&Delta;20 (Pert)</th><th>Pearson&Delta; (Ctrl, All)</th><th>Pearson&Delta;20 (Ctrl)</th><th>N Cond.</th><th>Centroid Acc.</th></tr></thead>
         <tbody>
@@ -388,7 +388,7 @@
 
     <!-- === All Tables === -->
     <div class="table-block">
-      <div class="caption">Table 1: All Metrics — K562</div>
+      <div class="caption"><b>Table 1: All Metrics — K562</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. Score (L1)</th><th>Overlap@50</th><th>DE Direction Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
@@ -409,7 +409,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 2: All Metrics — JURKAT</div>
+      <div class="caption"><b>Table 2: All Metrics — JURKAT</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. Score (L1)</th><th>Overlap@50</th><th>DE Direction Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
@@ -430,7 +430,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 3: All Metrics — HEPG2</div>
+      <div class="caption"><b>Table 3: All Metrics — HEPG2</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. Score (L1)</th><th>Overlap@50</th><th>DE Direction Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
@@ -451,7 +451,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 4: All Metrics — RPE1</div>
+      <div class="caption"><b>Table 4: All Metrics — RPE1</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. Score (L1)</th><th>Overlap@50</th><th>DE Direction Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
@@ -472,7 +472,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 5: All Metrics — K562 Cross Cell-Line (trained on RPE1/HEPG2/JURKAT, tested on K562)</div>
+      <div class="caption"><b>Table 5: All Metrics — K562 Cross Cell-Line (trained on RPE1/HEPG2/JURKAT, tested on K562)</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. L1</th><th>Overlap@50</th><th>DE Dir. Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
@@ -519,7 +519,7 @@
   <div id="BXkW_lm" class="sub-panel">
     <div class="figure-block">
       <img src="Reviewer_BXkW/LM_variations/260331_llm_embedding_comparison.png" alt="LLM Embedding Comparison">
-      <div class="caption">Figure 1: Sensitivity of perturbation prediction to the choice of language model for gene summary generation. (a) Test Pearson delta comparison between GPT-4o and Claude (Haiku 4.5) for generating gene functional summaries, which are subsequently embedded using the same text-embedding-3-large model (3,072 dimensions). Two reference source conditions are tested: NCBI + UniProt (combining gene descriptions with protein functional summaries) and NCBI only (gene descriptions alone). Delta values indicate the performance difference (Claude − GPT). (b) Composition of gene summaries by source. When NCBI + UniProt references are available, 99.4% of the 18,166 genes in the STRING PPI network have existing database descriptions, leaving only 117 genes (0.6%) requiring AI generation. With NCBI descriptions alone, 1,364 genes (7.5%) lack substantive descriptions and require AI-generated summaries. The performance difference between LLMs scales with the proportion of AI-generated content: negligible when most summaries come from curated databases, but measurable (+0.0050 Pearson delta) when a larger fraction relies on AI generation.</div>
+      <div class="caption"><b>Figure 1: Sensitivity of perturbation prediction to the choice of language model for gene summary generation.</b> (a) Test Pearson delta comparison between GPT-4o and Claude (Haiku 4.5) for generating gene functional summaries, which are subsequently embedded using the same text-embedding-3-large model (3,072 dimensions). Two reference source conditions are tested: NCBI + UniProt (combining gene descriptions with protein functional summaries) and NCBI only (gene descriptions alone). Delta values indicate the performance difference (Claude − GPT). (b) Composition of gene summaries by source. When NCBI + UniProt references are available, 99.4% of the 18,166 genes in the STRING PPI network have existing database descriptions, leaving only 117 genes (0.6%) requiring AI generation. With NCBI descriptions alone, 1,364 genes (7.5%) lack substantive descriptions and require AI-generated summaries. The performance difference between LLMs scales with the proportion of AI-generated content: negligible when most summaries come from curated databases, but measurable (+0.0050 Pearson delta) when a larger fraction relies on AI generation.</div>
     </div>
   </div>
 </div>
@@ -538,7 +538,7 @@
     <!-- === All Figures === -->
     <div class="figure-block">
       <img src="Reviewer_nSvh/comprehensive_results/k562_comparison.png" alt="K562 Comparison">
-      <div class="caption">Figure 1: Method comparison on K562 unseen perturbation setting (n=272 test perturbations). Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +5.5% improvement over the second-best method (TxPert), along with the best Overlap@50 (+7.5%), MAE Delta (-3.8%), DE Spearman LFC (+3.0%), and DE Direction Match (+1.9%), ranking first across all evaluated metrics. Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
+      <div class="caption"><b>Figure 1: Method comparison on K562 unseen perturbation setting (n=272 test perturbations)</b>. Top row: global metrics (Pearson Delta, MAE Delta, Discrimination L1). Bottom row: DEG-level metrics (Overlap@50, DE Direction Match, DE Spearman LFC). Right: radar chart ranking all methods across 6 metrics. AdaPert achieves the highest Pearson Delta with +5.5% improvement over the second-best method (TxPert), along with the best Overlap@50 (+7.5%), MAE Delta (-3.8%), DE Spearman LFC (+3.0%), and DE Direction Match (+1.9%), ranking first across all evaluated metrics. Percentage annotations indicate AdaPert's relative improvement over the next-best method.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_nSvh/comprehensive_results/jurkat_comparison.png" alt="JURKAT Comparison">
@@ -559,7 +559,7 @@
 
     <!-- === All Tables === -->
     <div class="table-block">
-      <div class="caption">Table 1: All Metrics — K562</div>
+      <div class="caption"><b>Table 1: All Metrics — K562</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. Score (L1)</th><th>Overlap@50</th><th>DE Direction Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
@@ -580,7 +580,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 2: All Metrics — JURKAT</div>
+      <div class="caption"><b>Table 2: All Metrics — JURKAT</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. Score (L1)</th><th>Overlap@50</th><th>DE Direction Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
@@ -601,7 +601,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 3: All Metrics — HEPG2</div>
+      <div class="caption"><b>Table 3: All Metrics — HEPG2</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. Score (L1)</th><th>Overlap@50</th><th>DE Direction Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
@@ -622,7 +622,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 4: All Metrics — RPE1</div>
+      <div class="caption"><b>Table 4: All Metrics — RPE1</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. Score (L1)</th><th>Overlap@50</th><th>DE Direction Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
@@ -643,7 +643,7 @@
     </div>
 
     <div class="table-block">
-      <div class="caption">Table 5: All Metrics — K562 Cross Cell-Line (trained on RPE1/HEPG2/JURKAT, tested on K562)</div>
+      <div class="caption"><b>Table 5: All Metrics — K562 Cross Cell-Line (trained on RPE1/HEPG2/JURKAT, tested on K562)</b></div>
       <table>
         <thead><tr><th>Method</th><th>Pearson &Delta;</th><th>MAE &Delta;</th><th>Discrim. L1</th><th>Overlap@50</th><th>DE Dir. Match</th><th>DE Spearman LFC</th></tr></thead>
         <tbody>
@@ -712,11 +712,11 @@
   <div id="nSvh_collapse" class="sub-panel">
     <div class="figure-block">
       <img src="Reviewer_nSvh/mean_collapse/260331_deg_nondeg_comparison_final.png" alt="DEG vs non-DEG Comparison">
-      <div class="caption">Figure 1: DEG vs non-DEG prediction error on K562 (n=272 perturbations). Three methods compared: Linear+GenePT (Ji et al., Nature Methods 2025), TxPert (second-best baseline), and AdaPert. Top row: rank-weighted MSE (wMSE, weights inversely proportional to DEG rank by |LFC|, emphasizing top-impact genes). Bottom row: unweighted MSE. Left two columns: boxplots for DEG and non-DEG genes respectively; diamonds denote means. Right column: normalized improvement of AdaPert over TxPert. On wMSE, AdaPert&rsquo;s improvement is larger on DEG genes (3.0%) than non-DEG genes (1.8%), confirming that the gains specifically target the highest-impact differentially expressed genes &mdash; the genes most susceptible to mean-collapse. On unweighted MSE, improvements are comparable (DEG 4.6%, non-DEG 4.7%), indicating no degradation of non-DEG prediction quality. The consistent progression Linear &rarr; TxPert &rarr; AdaPert across all four panels demonstrates that mean-collapse is progressively mitigated by KG-based message passing and adaptive context extraction.</div>
+      <div class="caption"><b>Figure 1: DEG vs non-DEG prediction error on K562 (n=272 perturbations).</b> Three methods compared: Linear+GenePT (Ji et al., Nature Methods 2025), TxPert (second-best baseline), and AdaPert. Top row: rank-weighted MSE (wMSE, weights inversely proportional to DEG rank by |LFC|, emphasizing top-impact genes). Bottom row: unweighted MSE. Left two columns: boxplots for DEG and non-DEG genes respectively; diamonds denote means. Right column: normalized improvement of AdaPert over TxPert. On wMSE, AdaPert&rsquo;s improvement is larger on DEG genes (3.0%) than non-DEG genes (1.8%), confirming that the gains specifically target the highest-impact differentially expressed genes &mdash; the genes most susceptible to mean-collapse. On unweighted MSE, improvements are comparable (DEG 4.6%, non-DEG 4.7%), indicating no degradation of non-DEG prediction quality. The consistent progression Linear &rarr; TxPert &rarr; AdaPert across all four panels demonstrates that mean-collapse is progressively mitigated by KG-based message passing and adaptive context extraction.</div>
     </div>
     <div class="figure-block">
       <img src="Reviewer_nSvh/mean_collapse/ablation_barplot_nature.png" alt="Ablation Barplot by Effect Size">
-      <div class="caption">Figure 2: Ablation study stratified by perturbation effect size on K562 (n=272 perturbations). Perturbations grouped by fraction of DEGs (FDR &lt; 0.05): &lt;5% (n=92, weak), 5&ndash;10% (n=80, moderate), &gt;10% (n=100, strong). Three conditions: AdaPert (full model), w/o non-DEG loss, w/o context. Top row: mean &plusmn; std. Bottom row: median &plusmn; IQR. Left to right: Pearson Delta, Discrimination L1/L2/Cosine. AdaPert&rsquo;s advantage is most pronounced on weak perturbations (&lt;5% DEGs): median Pearson Delta +6.7% over w/o context. For strong perturbations (&gt;10%), full AdaPert shows +12.3% median Discrimination L1 and +13.3% median Discrimination L2 over w/o context, indicating that context extraction is critical for discriminating large perturbation effects. The non-DEG loss contributes moderate gains across all groups, consistent with its role in suppressing mean-collapse on non-DEG genes.</div>
+      <div class="caption"><b>Figure 2: Ablation study stratified by perturbation effect size on K562 (n=272 perturbations).</b> Perturbations grouped by fraction of DEGs (FDR &lt; 0.05): &lt;5% (n=92, weak), 5&ndash;10% (n=80, moderate), &gt;10% (n=100, strong). Three conditions: AdaPert (full model), w/o non-DEG loss, w/o context. Top row: mean &plusmn; std. Bottom row: median &plusmn; IQR. Left to right: Pearson Delta, Discrimination L1/L2/Cosine. AdaPert&rsquo;s advantage is most pronounced on weak perturbations (&lt;5% DEGs): median Pearson Delta +6.7% over w/o context. For strong perturbations (&gt;10%), full AdaPert shows +12.3% median Discrimination L1 and +13.3% median Discrimination L2 over w/o context, indicating that context extraction is critical for discriminating large perturbation effects. The non-DEG loss contributes moderate gains across all groups, consistent with its role in suppressing mean-collapse on non-DEG genes.</div>
     </div>
   </div>
 </div>
@@ -730,24 +730,34 @@
   </div>
 
   <div id="t8Qj_downstream" class="sub-panel active">
-    <div class="figure-block">
-      <img src="Reviewer_t8Qj/downs_stream_analysis/260330_deg_recovery_table.png" alt="DEG Recovery">
-      <div class="caption">Figure 1: DEG identification accuracy across methods on K562 test set (n=272 perturbations). Overlap@K: fraction of ground-truth DEGs (FDR &lt; 0.05) recovered in top-K predicted DE genes. Direction Accuracy: fraction of DEGs with correctly predicted regulation direction. DEG Recall: fraction of true significant genes identified as significant by predicted profiles. P-values from two-sided Wilcoxon signed-rank tests, paired by perturbation (AdaPert vs. TxPert). Best values highlighted in red. AdaPert significantly outperforms TxPert on Overlap@100 (0.258 vs. 0.235, p = 3.6&times;10&minus;8), Overlap@200 (0.250 vs. 0.225, p = 1.9&times;10&minus;14), and Direction Accuracy (0.866 vs. 0.850, p = 7.3&times;10&minus;3).</div>
-    </div>
-    <div class="figure-block">
-      <img src="Reviewer_t8Qj/downs_stream_analysis/260330_pathway_recovery_summary.png" alt="Pathway Recovery">
-      <div class="caption">Figure 2: Pathway recovery from predicted expression profiles via GSEA (MSigDB Hallmark 2020, 300 permutations) across 272 test perturbations. Left: Pathway Recovery Rate &mdash; fraction of ground-truth significant pathways (FDR &lt; 0.25) also identified as significant in predictions. Center: NES Correlation &mdash; Pearson r between predicted and ground-truth Normalized Enrichment Scores across matched pathways. Right: Direction Accuracy &mdash; fraction of pathways with correctly predicted enrichment direction (up/down). Diamonds denote means; boxes span IQR. AdaPert achieves the highest recovery rate (0.200 vs. 0.179 for TxPert, 0.114 for Linear) and direction accuracy (0.573 vs. 0.563, 0.532).</div>
-    </div>
-    <div class="figure-block">
-      <img src="Reviewer_t8Qj/downs_stream_analysis/260330_perturbation_ranking.png" alt="Perturbation Ranking">
-      <div class="caption">Figure 3: Perturbation ranking accuracy by pathway effect. For each of 44 Hallmark pathways (&ge;20 perturbations with valid GSEA), all 272 test perturbations are ranked by predicted NES and compared with ground-truth rankings via Spearman &rho;. Left: overall distribution across pathways. Right: per-pathway comparison for selected pathways sorted by AdaPert advantage. AdaPert (mean &rho; = 0.207) and TxPert (0.205) substantially outperform Linear (0.082). AdaPert shows notable advantages on Glycolysis, Bile Acid Metabolism, and mTORC1 Signaling pathways.</div>
+    <div class="two-col">
+      <div class="col-left">
+        <div class="figure-block">
+          <img src="Reviewer_t8Qj/downs_stream_analysis/260330_deg_recovery_table.png" alt="DEG Recovery">
+          <div class="caption"><b>Figure 1. DEG identification accuracy across methods on the K562 single cell dataset.</b> We measured performance using three metrics. Overlap@K evaluates the fraction of ground-truth DEGs (FDR &lt; 0.05) successfully recovered within the top-K predicted genes. Direction Accuracy tracks the fraction of DEGs where the model correctly predicts the regulation direction. DEG Recall measures the fraction of true significant genes that are also identified as significant in the predicted profiles. Best values are highlighted in red. We calculated p-values using two-sided Wilcoxon signed-rank tests, paired by perturbation (AdaPert vs. TxPert). Overall, AdaPert shows a clear advantage over TxPert.</div>
+        </div>
+        <div class="figure-block">
+          <img src="Reviewer_t8Qj/downs_stream_analysis/260330_pathway_recovery_summary.png" alt="Pathway Recovery">
+          <div class="caption"><b>Figure 2. Downstream Pathway Analysis (Quantitative Analysis).</b> We evaluated pathway recovery using Gene Set Enrichment Analysis (GSEA) across 272 test perturbations <span style="color:red;">in K562 single cells. As a well-characterized human leukemia model, K562 serves as a standard benchmark in genomics, providing a robust and reproducible baseline for studying perturbation effects.</span> We evaluated <span style="color:red;">the complete set of</span> MSigDB Hallmark 2020 pathways (300 permutations). <span style="color:red;">These hallmark pathways summarize specific, well-defined biological states (e.g., cell cycle, immune response). High recovery on this metric demonstrates that the model successfully captures the broad functional consequences of a perturbation, translating raw gene expression changes into meaningful biological insights.</span> <b>(Left) Pathway Recovery Rate.</b> This tracks the fraction of ground-truth significant pathways (FDR &lt; 0.25) that are also successfully identified as significant in the predictions. <b>(Center) NES Correlation.</b> The Pearson <i>r</i> between predicted and ground-truth Normalized Enrichment Scores across matched pathways. <b>(Right) Enrichment Direction Accuracy.</b> The fraction of pathways where the model correctly predicts the enrichment direction (up or down). In the plots, diamonds represent mean values, while boxes span the interquartile range (IQR). Overall, AdaPert shows the best recovery rate. It also provides the highest direction accuracy.</div>
+        </div>
+        <div class="figure-block">
+          <img src="Reviewer_t8Qj/downs_stream_analysis/260330_perturbation_ranking.png" alt="Perturbation Ranking">
+          <div class="caption"><b>Figure 3. Perturbation ranking by pathway effect on K562 (n=272 perturbations).</b> This figure was presented in our first-round rebuttal, showing a selected subset of the 50 MSigDB Hallmark pathways. For each pathway, we ran GSEA on both real and predicted expression profiles, then measured how well each method ranks perturbations by their pathway effect using Spearman &rho;. <b>(Left) Overall distribution</b> of Spearman &rho; across pathways. AdaPert (mean &rho;=0.207) and TxPert (0.205) show comparable overall performance. <b>(Right) Per-pathway breakdown</b> for the selected subset. At first glance, AdaPert and TxPert appear similar in overall ranking accuracy. However, following the reviewer's suggestion to report all pathways, we extended the analysis to the complete set of 50 Hallmark pathways <b>(Figure 4)</b>, which revealed a clear pattern: AdaPert's advantages concentrate on pathways with established biological relevance to K562 (a CML/erythroleukemia cell line), such as Heme Metabolism, Glycolysis, mTORC1 Signaling, and P53 Pathway. While TxPert edges ahead on more general pathways (e.g., Interferon Alpha Response, Dna Repair). This distinction is not apparent from the overall summary alone, and highlights that AdaPert preferentially captures cell-type-specific biological signals. See Figure 4 for the full pathway-level comparison with K562-relevant annotations.</div>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="figure-block">
+          <img src="Reviewer_t8Qj/downs_stream_analysis/260404_perturbation_ranking_dotplot.png" alt="Perturbation Ranking Dotplot">
+          <div class="caption"><b>Figure 4. Perturbation ranking accuracy across all 50 MSigDB Hallmark pathways on K562.</b> For each pathway, we compute the ground-truth Normalized Enrichment Score (NES) from GSEA on real expression profiles, repeat the same analysis on predicted profiles, and measure how well each method ranks perturbations by pathway effect using Spearman &rho;. Pathways are sorted by AdaPert's &rho; (descending). Three methods are compared: AdaPert (ours), TxPert, and Linear-GenePT, evaluated on 272 unseen test perturbations. <span style="color:red;">K562 is a chronic myeloid leukemia (CML) / erythroleukemia cell line widely used in large-scale Perturb-seq studies. Pathways with established biological relevance to K562 are highlighted (orange background, bold red labels), including heme metabolism (a defining feature of erythroleukemia), glycolysis (Warburg effect), mTORC1 and PI3K/AKT/mTOR signaling (downstream of the BCR-ABL oncogene), cholesterol homeostasis (leukemic lipid reprogramming), P53 pathway, and unfolded protein response</span>. AdaPert outperforms TxPert on <b>9 of 12 K562-relevant pathways</b>, with the strongest advantages on core metabolic pathways: Cholesterol Homeostasis, Heme Metabolism, Glycolysis, and mTORC1 Signaling. A small number of pathways (e.g., DNA Repair, Kras Signaling Dn) show negative correlations across all methods, indicating pathway-level signals that remain challenging for current perturbation prediction approaches.</div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div id="t8Qj_adaptive" class="sub-panel">
     <div class="figure-block">
       <img src="Reviewer_t8Qj/adaptive learning/inference_detail.png" alt="Adaptive Learning Inference">
-      <div class="caption">Figure 1: Adaptive Learning — Inference Detail</div>
+      <div class="caption"><b>Figure 1: Detailed illustration of AdaPert's adaptive learning step at inference for an unseen perturbation gene.</b> (Top-left) The perturbation gene is located on a shared KG template (STRING PPI network). A 4-layer GATv2 with skip-cat connections produces structural node embeddings while a pre-trained language model (GenePertESM) provides semantic embeddings. (Middle) A subgraph scoring function computes perturbation-conditioned attention weights for each neighbor by jointly leveraging structural and semantic features. Neighbors exceeding a threshold are selected to form the context subgraph, which adaptively varies in size per perturbation. (Bottom) The encoder maps control cell expression to a basal state representation. The context vector is computed via attention-weighted sum pooling over selected neighbors. The decoder takes the concatenation of basal state, context vector, and semantic embedding to predict perturbed gene expression. Crucially, the GNN and subgraph scoring operate on a fixed KG template shared across all perturbations — the adaptive step is purely attention-based, requiring no perturbation-specific graph construction at inference time.</div>
     </div>
   </div>
 
@@ -755,7 +765,7 @@
   <div id="t8Qj_lm_init" class="sub-panel">
     <div class="figure-block">
       <img src="Reviewer_t8Qj/LM_init/k562_llm_init_vs_adapert.png" alt="LLM-Init Node vs AdaPert">
-      <div class="caption">Figure 1: Comparison of node embedding strategies on K562 single-cell perturbation prediction. AdaPert uses a dual-channel node embedding where learned embeddings (nn.Embedding) are additively combined with a linear projection of GenePertESM LLM embeddings (Linear(3072→128)) at every forward pass. LLM-Init Node instead initializes nn.Embedding weights from projected LLM embeddings and discards the LLM projection afterward, training the embeddings freely. AdaPert outperforms LLM-Init Node across all six metrics: Pearson Delta (+4.6%), MAE Delta (-2.5%), Discrimination L1 (+5.2%), Overlap@50 (+5.7%), DE Direction Match (+1.2%), and DE Spearman LFC (+2.3%). Potential reasons: (1) only 54% of genes (9854/18216) have LLM embeddings, leaving the rest with random initialization; (2) the linear projection used for initialization is itself randomly initialized; (3) AdaPert's additive fusion preserves continuous access to LLM semantic information throughout training, while LLM-Init loses this signal after initialization.</div>
+      <div class="caption"><b>Figure 1: Comparison of node embedding strategies on K562 single-cell perturbation prediction.</b> AdaPert uses a dual-channel node embedding where learned embeddings (nn.Embedding) are additively combined with a linear projection of GenePertESM LLM embeddings (Linear(3072→128)) at every forward pass. LLM-Init Node instead initializes nn.Embedding weights from projected LLM embeddings and discards the LLM projection afterward, training the embeddings freely. AdaPert outperforms LLM-Init Node across all six metrics: Pearson Delta (+4.6%), MAE Delta (-2.5%), Discrimination L1 (+5.2%), Overlap@50 (+5.7%), DE Direction Match (+1.2%), and DE Spearman LFC (+2.3%). Potential reasons: (1) only 54% of genes (9854/18216) have LLM embeddings, leaving the rest with random initialization; (2) the linear projection used for initialization is itself randomly initialized; (3) AdaPert's additive fusion preserves continuous access to LLM semantic information throughout training, while LLM-Init loses this signal after initialization.</div>
     </div>
   </div>
 </div>
